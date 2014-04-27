@@ -5,6 +5,7 @@
 
 Welcome to Pointshop 2's documentation!
 =======================================
+Here you can find instructions on how to use Pointshop2! 
 
 Contents:
 
