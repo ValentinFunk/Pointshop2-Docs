@@ -19,4 +19,4 @@ Unless players already have the files from other places, they will see errors or
 - addons/pointshop2/materials
 - addons/libk/resource
 
-Make sure to upload them into your fastdl's root folder, i.e. addons/pointshop2/materials to fastdl/materials instead of fastdl/addons/pointshop2/materials.
+Make sure to upload them into your fastdl's root folder, i.e. *addons/pointshop2/materials* to *fastdl/materials*, NOT *fastdl/addons/pointshop2/materials*.
