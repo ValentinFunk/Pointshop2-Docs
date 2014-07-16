@@ -1,11 +1,8 @@
-Developer Guide
-...............
+Developer Information
+=====================
 
 Pointshop2 was designed with modification, customization and extension in mind.
 Wether you are extending or modifying the script, please follow the guildelines explained here.
-
-Developer Information
-=====================
 
 
 Terms, Agreement and General Guidelines 

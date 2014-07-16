@@ -30,6 +30,8 @@ import os
 # ones.
 extensions = ['redjack.sphinx.lua', 'sphinx.ext.todo']
 
+highlight_language = 'lua'
+
 primary_domain = 'lua'
 
 todo_include_todos = True
