@@ -1,5 +1,10 @@
 Developer API Reference
 =======================
+Use this to look up classes or methods.
+
+.. note::
+    Not every class is documented here. Look at the source code for usage examples.
+    This is intended to explain data structures that might not be obvious at first as well as documenting the public interface.
 
 Modules
 -------
