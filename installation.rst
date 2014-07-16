@@ -51,14 +51,16 @@ Within *addons/libk/lua/libk/shared/2_sh_libk.lua* LibK developer settings can b
 
 Defaults
 ********
-
+.. highlight:: lua
+.. code-block:: lua
   LibK.Debug = false
   LibK.LogLevel = 2 --Requires Debug
   LibK.LogSQL = false
   
 Developer
 *********
-
+.. highlight:: lua
+.. code-block:: lua
   LibK.Debug = true
   LibK.LogLevel = 4 --Requires Debug
   LibK.LogSQL = true
