@@ -3,17 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Pointshop 2's documentation!
-=======================================
-Here you can find instructions on how to use Pointshop2! 
-
-Contents:
-
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
    :glob:
    
    installation
-   developer
+   developer/index
+   developer/*
    *
 
