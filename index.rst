@@ -10,9 +10,9 @@
    installation
    *
    
-.. toctree::
-   :maxdepth: 4
-   :glob:
-   
-   developer/index
-   developer/*
+   .. toctree::
+      :maxdepth: 4
+      :glob:
+      
+      developer/index
+      developer/*
