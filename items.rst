@@ -24,9 +24,9 @@ Hats in pointshop2 are PAC3 items. As well as the ordinary single prop-based hat
 
 When creating a hat you have two options:
 
-.# Using the ordinary PAC3 editor and importing the outfits into Pointshop 2
+#. Using the ordinary PAC3 editor and importing the outfits into Pointshop 2
 
-.# Using the PAC3 editor embedded within the Pointshop2 hat editor
+#. Using the PAC3 editor embedded within the Pointshop2 hat editor
 
 Generally it is recommended to use the second way, this allows you to use the full editor and gives you more options. A common approach is to first create the PAC outfits in sandbox and then use the Hat Creator within the Management Tab to create a pointshop item from it. In gamemodes that do not derive from sandbox (for example TTT or Murder) the PAC editor cannot be used. In this case you can still use the Pointshop2 Hat Editor to create and position hats.
 
