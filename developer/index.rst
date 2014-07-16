@@ -60,7 +60,7 @@ To get started with Pointshop 2 development, first read the information on modul
 Modules are the main way to modify and extend Pointshop 2. They provide many automated facilities 
 that make it very easy to extend the script.
 
-Also check out the modification examples.
+After that a good way to start is to check out the examples.
 
 Examples
 ********
