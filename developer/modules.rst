@@ -16,7 +16,7 @@ Here you set up the module table which contains information such as the author a
 
 .. lua:class:: MODULE
 
-    .. lua:method:: Name 
+    .. lua:data:: Name 
     
         The name of the module.
     
