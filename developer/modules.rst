@@ -16,30 +16,30 @@ Here you set up the module table which contains information such as the author a
 
 .. lua:class:: MODULE
 
-    .. lua:data:: Name 
+    .. lua:attribute:: Name 
     
         The name of the module.
     
-    .. lua:method:: Author 
+    .. lua:attribute:: Author 
         
         The author of the module
         
-    .. lua:method:: RestrictGamemodes 
+    .. lua:attribute:: RestrictGamemodes 
         
         A table containing gamemodes that this module is restricted to. The module will only be loaded if the active gamemode is in the list.
         
-    .. lua:method:: Blueprints 
+    .. lua:attribute:: Blueprints 
         
         A table containing Blueprints that players can use.
         
-    .. lua:method:: Settings 
+    .. lua:attribute:: Settings 
         
         A table containing the settings of the module.
         
-    .. lua:method:: SettingsButton 
+    .. lua:attribute:: SettingsButton 
         
         A table containing information about the settings button that will show up in the management tab. 
 
 .. lua:function:: Poinsthop2.RegisterModule(MODULE)
 
-   Registers a module to be used with Pointshop 2. 
+   Registers a :lua:class:`MODULE` to be used with Pointshop 2. 
