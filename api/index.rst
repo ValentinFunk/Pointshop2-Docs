@@ -1,8 +1,8 @@
 Developer API Reference
-.......................
+=======================
 
 Modules
-=======
+-------
 
 .. lua:class:: Blueprint
     

@@ -1,6 +1,3 @@
-User Guide
-..........
-
 Getting Started
 ===============
 
