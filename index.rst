@@ -8,7 +8,9 @@
    :glob:
    
    installation
+   *
+   
    developer/index
    developer/*
-   *
+   
 
