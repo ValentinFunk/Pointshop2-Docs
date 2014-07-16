@@ -51,17 +51,20 @@ Within *addons/libk/lua/libk/shared/2_sh_libk.lua* LibK developer settings can b
 
 Defaults
 ********
-.. highlight:: lua
-.. code-block:: lua
+
    LibK.Debug = false
+   
    LibK.LogLevel = 2 --Requires Debug
+   
    LibK.LogSQL = false
   
 Developer
 *********
 
    LibK.Debug = true
+   
    LibK.LogLevel = 4 --Requires Debug
+   
    LibK.LogSQL = true
 
 ``LibK.LogSQL`` logs every query that is generated and sent to the database. This can slow down the server significantly and creates large log files. Only use it if needed.
