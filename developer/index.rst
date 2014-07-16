@@ -1,3 +1,6 @@
+Developer Guide
+...............
+
 Developer Information
 =====================
 
@@ -61,6 +64,33 @@ Modules are the main way to modify and extend Pointshop 2. They provide many aut
 that make it very easy to extend the script.
 
 After that a good way to start is to check out the examples.
+
+Developer Options
+-----------------
+To make development and debugging of the script easier there are a few options for developers. If you experience any errors please also turn these settings on as it will help track errors down.
+
+Within *addons/libk/lua/libk/shared/2_sh_libk.lua* LibK developer settings can be configured.
+
+Defaults
+********
+
+   LibK.Debug = false
+   
+   LibK.LogLevel = 2 --Requires Debug
+   
+   LibK.LogSQL = false
+  
+Developer
+*********
+
+   LibK.Debug = true
+   
+   LibK.LogLevel = 4 --Requires Debug
+   
+   LibK.LogSQL = true
+
+``LibK.LogSQL`` logs every query that is generated and sent to the database. This can slow down the server significantly and creates large log files. Only use it if needed.
+
 
 Examples
 ********

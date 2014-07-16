@@ -1,16 +1,29 @@
+User Guide
+..........
+
 Getting Started
 ===============
 
 Installation
 ------------
 To install Pointshop2 simply extract the zip you downloaded into the addons folder.
+This will give you two folders: *addons/pointshop2* and *addons/libk*.
+
+Next install PAC3, the newest version can always be found `here <https://github.com/CapsAdmin/pac3/archive/master.zip>`_.
+Download and extract the zip, too. This will give you *addons/pac3-master*.
+
+Final structure when everything is installed:
+- garrysmod
+   - addons
+      - libk
+      - pac3
+      - pointshop2
 
 Configuration
 -------------
 Pointshop2 requires no initial configuration! Once it is installed you are ready to go!
 Restart your server and press F3 to open the menu. If nothing happens, use the "pointshop2" console command.
 You can find all settings under the "Management" tab.
-
 
 FastDL
 ------
@@ -20,6 +33,7 @@ Unless players already have the files from other places, they will see errors or
 - addons/libk/resource
 
 Make sure to upload them into your fastdl's root folder, i.e. *addons/pointshop2/materials* to *fastdl/materials*, NOT *fastdl/addons/pointshop2/materials*.
+
 
 Advanced Configuration
 ======================
@@ -39,30 +53,3 @@ To enable MySQL please follow these steps:
 #. **Enable MySQL within LibK**: LibK is used for all database operations of Pointshop2. To enable MySQL support go into the configuration file *addons/libk/lua/libk/server/sv_libk_config.lua*. Set ``LibK.SQL.UseMysql = true`` and update the remaining settings with your database connection details. If you are hosting the database on a different machine than the gamemserver, make sure to allow external connections to the database. 
 
 #. **Test the configuration**: After a server restart Pointshop2 will now connect to MySQL. If there are any errors when connecting to the database they will be shown in the server console and logged to garrysmod/data/LibK_Error.txt serverside.
-
-
-Developer Options
------------------
-To make development and debugging of the script easier there are a few options for developers. If you experience any errors please also turn these settings on as it will help track errors down.
-
-Within *addons/libk/lua/libk/shared/2_sh_libk.lua* LibK developer settings can be configured.
-
-Defaults
-********
-
-   LibK.Debug = false
-   
-   LibK.LogLevel = 2 --Requires Debug
-   
-   LibK.LogSQL = false
-  
-Developer
-*********
-
-   LibK.Debug = true
-   
-   LibK.LogLevel = 4 --Requires Debug
-   
-   LibK.LogSQL = true
-
-``LibK.LogSQL`` logs every query that is generated and sent to the database. This can slow down the server significantly and creates large log files. Only use it if needed.

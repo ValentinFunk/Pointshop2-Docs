@@ -14,3 +14,6 @@
    
    developer/index
    developer/*
+   
+   api/index
+   api/*
