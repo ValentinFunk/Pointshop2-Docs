@@ -53,7 +53,9 @@ Defaults
 ********
 
    LibK.Debug = false
+   
    LibK.LogLevel = 2 --Requires Debug
+   
    LibK.LogSQL = false
   
 Developer
