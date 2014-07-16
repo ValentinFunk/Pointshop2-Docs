@@ -33,13 +33,14 @@ By default SQLite (via sv.db) is used to store all player and pointshop data. If
 Switching from SQLite to MySQL means that the pointshop is reset - the data is not transferred across. If you wish to keep your data you have to manually export it.
 
 To enable MySQL please follow these steps:
-1) Install the gmsv_mysqloo module
+
+#. Install the gmsv_mysqloo module
 Download the module from `facepunch <http://facepunch.com/showthread.php?t=1357773>`_ and follow the installation instructions for your operating system at the bottom of the post.
 
-2) Enable MySQL within LibK
+#. Enable MySQL within LibK
 LibK is used for all database operations of Pointshop2. To enable MySQL support go into the configuration file *addons/libk/lua/libk/server/sv_libk_config.lua*. Set ``LibK.SQL.UseMysql = true`` and update the remaining settings with your database connection details. If you are hosting the database on a different machine than the gamemserver, make sure to allow external connections to the database. 
 
-3) Testing the configuration
+#. Testing the configuration
 After a server restart Pointshop2 will now connect to MySQL. If there are any errors when connecting to the database they will be shown in the server console and logged to garrysmod/data/LibK_Error.txt serverside.
 
 
