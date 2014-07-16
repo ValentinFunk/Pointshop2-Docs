@@ -14,5 +14,6 @@ Contents:
    :glob:
    
    installation
+   developer
    *
 
