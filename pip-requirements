@@ -1,0 +1,1 @@
+-e git+git://git@github.com:redjack/sphinx-lua.git#egg=sphinx-lua
