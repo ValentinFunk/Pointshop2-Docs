@@ -55,12 +55,20 @@ The Accessory/Hat Maker
 One of the main features of Pointshop2 is to make item creation much easier and fluid.
 The Accessory/Hat Maker is the tool used to create PAC3 powered Hats and Accessories. This includes Pets, Hats and various other items that modify the look of the player.
 
+The editor can be accessed within the Management tab under "Create Items". Select Accessory/Hat and the editor will open. To create an item follow these steps:
 
+#. _Fill out the basic information_: Fill out the basic fields such as name, point costs and a description.
 
+#. _Create or import the base outfit_: To do this, simply click on the Open Editor button and select the respective option. This outfit is applied to all models by default. CS:S Playermodels usually require slightly different positioning of the items.
+
+#. _Add model specific outfits_: To modify the item positions for CS:S or other playermodels, click the "Add" button beneath the main editor button. You can now choose to create an outfit for all CS:S models or choose a model manually. After selecting this option you can clone the base outfit and adapt the positions. Please not that the outfit is only cloned when you click this button, if you change the main outfit after cloning the changes will not automatically apply to all model specific outfits. In order to fix this simple reclone the outfit by selectiong the option within the model specific outfits table.
+
+#. _Create a shop icon_: Icons for PAC items are automatically generated. To specify from where the icon should look at the item you can use the icon editor. Within the item positioner you will usually click on the "Icon Snapshot" button. This will initialize the icon for you. To fine tune the icon's view you can use the sliders next to the icon.
+
+#. _Create an inventory icon_: To update the inventory icon follow the same procedure as for the shop icon. Please note that creating a new icon snapshot will overwrite previous changes. It is recommended that you use the sliders for the inventory icon after creating the shop icon.
 
 Slots
 *************
-To avoid clipping and keep everything organized, items are categorized by different slots, which can be viewed via the inventory tab. This allows for multiple accessories on the player, such as head, pets, etc. Items are not set to a single slot, meaning they can be used in multiple areas if the user wishes to do so.
+To avoid clipping and keep everything organized, items are categorized by different slots, which can be viewed via the inventory tab. This allows for multiple accessories on the player, such as head, pets, etc. Items are not set to a single slot, meaning they can be used in multiple areas if the user wishes to do so. 
 
-Icons for Hats/PAC Items
-************************
+To assign an item to a slot simply check the checkboxes in the item editor. Only slots that were created for Accessory/Hat items can be used, so a PAC item cannot be put into a Trail slot. 
