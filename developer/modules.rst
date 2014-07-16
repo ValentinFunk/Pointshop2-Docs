@@ -10,7 +10,7 @@ The module structure is very simple. Each module is a folder within the *lua/ps2
 Every file in this folder is recursively loaded by the module loader. The realm is determined by
 the file prefix (sh, cl, sv). Client files are automatically AddCSLuaFile'd. 
 
-.. lua:function:: Poinsthop2.RegisterModule( MODULE )
+.. lua:function:: Poinsthop2.RegisterModule(MODULE)
 
    Describes a Python function.
 
