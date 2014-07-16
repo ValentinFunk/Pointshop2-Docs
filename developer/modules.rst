@@ -16,10 +16,15 @@ Here you set up the module table which contains information such as the author a
 
 Adding custom Item Types
 ========================
-
+.. todo::
+    Docs for creating item types
 
 Adding custom Tabs
 ==================
+.. todo::
+    Docs for creating tabs
 
 Adding custom Settings
 ======================
+.. todo::
+    Docs for creating settigns
