@@ -35,22 +35,22 @@ require additional functionality do not hesitate to get in touch via steam, code
 Modification Guidelines
 ***********************
 #. **Never modify code files**: When extending or modifying pointshop 2 the first guideline is to never modify any
-of the core files. You can use hooks and global functions to extend the script or modify
-functionality. This makes sure that there are as little conflicts between addons as possible.
-If you need a specific hook or if modification of core files is a much easier solution to a general problem,
-please get in touch.
+ of the core files. You can use hooks and global functions to extend the script or modify
+ functionality. This makes sure that there are as little conflicts between addons as possible.
+ If you need a specific hook or if modification of core files is a much easier solution to a general problem,
+ please get in touch.
 
 #. **Skin your panels only in derma skins**: To make sure that skins can provide a consistent experience,
-it is important that Paint functions are never directly overwritten. Instead use Derma_Hook and extend the 
-base skin. This gives skin creator the chance to support your addon without messy hooks and overwrites.
+ it is important that Paint functions are never directly overwritten. Instead use Derma_Hook and extend the 
+ base skin. This gives skin creator the chance to support your addon without messy hooks and overwrites.
 
 #. **Avoid global variables**: Use local variables or create a single global table for your addon to store globals.
 This avoids cluttering the global namespace, is faster and avoids conflicts.
 
 #. **Avoid direct database queries**: Pointshop 2 makes heavy use of LibK as a database abstraction layer. This 
-enables easy swapping of the databases and makes it possible to avoid many security issues. While you are not required
-to use LibK models you are encouraged to do so as it automates table creation and removal and allows you to hook into the
-export, import and backup mechanisms of Pointshop 2 without additional work.
+ enables easy swapping of the databases and makes it possible to avoid many security issues. While you are not required
+ to use LibK models you are encouraged to do so as it automates table creation and removal and allows you to hook into the
+ export, import and backup mechanisms of Pointshop 2 without additional work.
 
 #. **Use lowercase file and folder names**: To keep linux compatibility please use lowercase file and foldernames. 
 
