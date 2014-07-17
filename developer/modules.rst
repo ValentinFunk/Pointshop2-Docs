@@ -133,7 +133,7 @@ This concludes all of the serverside code that is needed for handling the creati
 Creating the item base
 ======================
 
-The next step is to create the item base for your item type. To do this, create a new file within **lua/kinv/items/pointshop**. The name should be **sh_base_<itemname>.lua* you can also put your file into a subdirectory. Inside of the item base you can now overwrite any of the pointshop base functions and add item hooks as required.
+The next step is to create the item base for your item type. To do this, create a new file within **lua/kinv/items/pointshop**. The name should be ``sh_base_<itemname>.lua`` you can also put your file into a subdirectory. Inside of the item base you can now overwrite any of the pointshop base functions and add item hooks as required.
 
 .. todo::
     Item hook explanation
