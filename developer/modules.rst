@@ -153,7 +153,7 @@ Next you need to link the base to the persistence. To do this simply define a st
 Example:
 
 
-.. hightlight:lua::
+.. highlight:lua::
     ITEM.PrintName = "Pointshop Example Base"
     ITEM.baseClass = "base_pointshop_item"
     
@@ -183,7 +183,7 @@ The last step is to create a custom editor control, which is shown when clicking
 
 Example template:
 
-.. hightlight:lua::
+.. highlight:lua::
     local PANEL = {}
     
     function PANEL:Init()
@@ -224,7 +224,7 @@ Example:
 Creating a slot for your item
 =============================
 
-Slots are created using the function :lua:fun:`Pointshop2.AddEquipmentSlot`
+Slots are created using the function :lua:func:`Pointshop2.AddEquipmentSlot`
 
 Example:
 
