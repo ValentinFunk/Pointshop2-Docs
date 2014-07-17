@@ -31,6 +31,7 @@ require additional functionality do not hesitate to get in touch via steam, code
 
 To summarize:
 For free (public scripts) or a small fee (commercial scripts) you get:
+
 - Personal support
 - Code review and quality assurance
 - Compatibility testing against all addons in the program
