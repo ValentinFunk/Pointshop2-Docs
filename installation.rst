@@ -10,6 +10,7 @@ Next install PAC3, the newest version can always be found `here <https://github.
 Download and extract the zip, too. This will give you *addons/pac3-master*.
 
 Final structure when everything is installed:
+
 - garrysmod
    - addons
       - libk
