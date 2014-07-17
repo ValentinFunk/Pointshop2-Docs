@@ -75,6 +75,13 @@ Developer
 
 ``LibK.LogSQL`` logs every query that is generated and sent to the database. This can slow down the server significantly and creates large log files. Only use it if needed.
 
+The reload command
+******************
+
+For easier development the ``pointshop2_reload`` command to fully reload the script was added. It requires LibK to be in debug mode as well as the user to be an administrator. The command will reload every part of the script, including the database. You can use this to quickly test changes without having to change the map. The command only works for existing files, when adding new files you have to do a map change. 
+
+.. note::
+   The ``pointshop2_reload`` command is currently broken on linux as file changes are not properly picked up by the game.
 
 Examples
 ********

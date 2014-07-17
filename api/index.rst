@@ -106,3 +106,11 @@ Modules
     Example:
     .. highlight:: lua
         print(Pointshop2.GetSetting("TTTIntegration", "RoundWin.Innocent"))
+        
+.. lua:function:: Pointshop2.AddEquipmentSlot(name, itemValidFunction)
+
+    Registers a new equipment slot.
+    
+    **Name**:label of the slot that is shown underneath the slot's panel in the inventory.
+    **itemValidFunction**: A function that takes an item as an argument and returns whether or not it can be equipped in the slot.
+    
