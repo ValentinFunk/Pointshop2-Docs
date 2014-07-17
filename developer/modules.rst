@@ -41,7 +41,7 @@ Internally this is achieved using the following components:
 A **blueprint** is defined as the persistence, item base and creator for an item type.
 
 Creating a persistence
-----------------------
+======================
 
 The first step when creating a custom item type is to create it's persistence. A persistence needs to be a LibK model, which is done by including the ``DatabaseModel`` mixin. 
 
@@ -131,14 +131,14 @@ For simple items you can follow this template:
 This concludes all of the serverside code that is needed for handling the creation and modification of items. 
 
 Creating the item base
-**********************
+======================
 
 The next step is to create the item base for your item type. To do this, create a new file within **lua/kinv/items/pointshop**. The name should be **sh_base_<itemname>.lua* you can also put your file into a subdirectory. Inside of the item base you can now overwrite any of the pointshop base functions and add item hooks as required.
 
 .. todo::
     Item hook explanation
 
-. lua:function:: ITEM.static.generateFromPersistence(itemTable, persistenceItem)
+.. lua:function:: ITEM.static.generateFromPersistence(itemTable, persistenceItem)
 
     Decodes all information from the persistenceItem and adds fields and methods to the itemTable field.
     
@@ -177,9 +177,9 @@ Example:
 Within the item base you can also specify your own, custom icon controls for both, the shop and the inventory.
 
 Adding the clientside creator
-*****************************
+=============================
 
-The last step is to create a custom editor control, which is shown when clicking the create item button. This is very easy to do, simply create a new file inside your module, called **D*<youritem>*Creator**. It should inherit from ``DPointshopItemCreator`` and overwrite the ``SaveItem(saveTable)`` and ``EditItem(persistence, itemClass)`` methods. The ``SaveItem`` method populates the save table passed as argument with the settings set in the item creator. The ``EditItem`` method poulates the editor with the settings stored in the persistence. For ease of access the relevant itemClass is also passed as data from the persistence might be accessible easier in there.
+The last step is to create a custom editor control, which is shown when clicking the create item button. This is very easy to do, simply create a new file inside your module, called ``D<youritem>Creator``. It should inherit from ``DPointshopItemCreator`` and overwrite the ``SaveItem(saveTable)`` and ``EditItem(persistence, itemClass)`` methods. The ``SaveItem`` method populates the save table passed as argument with the settings set in the item creator. The ``EditItem`` method poulates the editor with the settings stored in the persistence. For ease of access the relevant itemClass is also passed as data from the persistence might be accessible easier in there.
 
 Example template:
 
@@ -204,7 +204,7 @@ Example template:
     vgui.Register( "DExampleCreator", PANEL, "DItemCreator" )
 
 Putting it all together: The blueprint
-**************************************
+======================================
 
 The only thing left to do now is to link the item to the menu and register it with the modules. This is done within sh_module.lua. Simply define all of your components in a :lua:class`Blueprint`. 
 
@@ -221,7 +221,7 @@ Example:
     },
     
 Creating a slot for your item
-*****************************
+=============================
 
 Slots are created using the function :lua:fun:`Pointshop2.AddEquipmentSlot`
 
