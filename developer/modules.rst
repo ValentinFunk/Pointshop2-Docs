@@ -12,7 +12,7 @@ the file prefix (sh, cl, sv). Client files are automatically AddCSLuaFile'd.
 
 
 Within this folder the module description file *sh_module.lua* needs to be placed.
-Here you set up the module table which contains information such as the author and name of the module, then register it using :lua:func:`Pointshop2.RegisterModule`.
+Here you set up the module table (:lua:class:`MODULE`) which contains information such as the author and name of the module, then register it using :lua:func:`Pointshop2.RegisterModule`.
 
 Adding custom Item Types
 ========================
