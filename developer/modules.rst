@@ -206,7 +206,7 @@ Example template:
 Putting it all together: The blueprint
 ======================================
 
-The only thing left to do now is to link the item to the menu and register it with the modules. This is done within sh_module.lua. Simply define all of your components in a :lua:class`Blueprint`. 
+The only thing left to do now is to link the item to the menu and register it with the modules. This is done within sh_module.lua. Simply define all of your components in a :lua:class:`Blueprint`. 
 
 Example:
 
