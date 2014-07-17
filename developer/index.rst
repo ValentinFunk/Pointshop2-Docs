@@ -29,6 +29,14 @@ Follow up code reviews and code reviews for updates are free.
 Support and information during the creation of a script are free. If you have any problems or a question about the codebase or
 require additional functionality do not hesitate to get in touch via steam, coderhire PM or email.
 
+To summarize:
+For free (public scripts) or a small fee (commercial scripts) you get:
+- Personal support
+- Code review and quality assurance
+- Compatibility testing against all addons in the program
+- Listed on the script's page and officiall endorsement by Pointshop 2
+- Promotion through Pointshop 2 communication channels
+
 Modification Guidelines
 ***********************
 #. **Never modify code files**: When extending or modifying pointshop 2 the first guideline is to never modify any of the core files. You can use hooks and global functions to extend the script or modify functionality. This makes sure that there are as little conflicts between addons as possible. If you need a specific hook or if modification of core files is a much easier solution to a general problem, please get in touch.
