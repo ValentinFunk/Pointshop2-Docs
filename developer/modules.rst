@@ -50,7 +50,8 @@ Creating the data model
 
 You can use this template:
 
-.. highlight:lua::
+.. highlight:: lua
+.. code-block:: lua
 
     Pointshop2.ExamplePersistence = class( "Pointshop2.ExamplePersistence" )
     local ExamplePersistence = Pointshop2.ExamplePersistence
@@ -100,7 +101,8 @@ Create a new file within your module called **sh_model_<itemname>persistence.lua
 
 For simple items you can follow this template:
 
-.. hightlight:lua::
+.. highlight:: lua
+.. code-block:: lua
     
     function ExamplePersistence.static.createOrUpdateFromSaveTable( saveTable, doUpdate )
         -- Firstly, save or update the basic item information.
@@ -153,7 +155,9 @@ Next you need to link the base to the persistence. To do this simply define a st
 Example:
 
 
-.. highlight:lua::
+.. highlight:: lua
+.. code-block:: lua
+
     ITEM.PrintName = "Pointshop Example Base"
     ITEM.baseClass = "base_pointshop_item"
     
@@ -183,7 +187,9 @@ The last step is to create a custom editor control, which is shown when clicking
 
 Example template:
 
-.. highlight:lua::
+.. highlight:: lua
+.. code-block:: lua
+
     local PANEL = {}
     
     function PANEL:Init()
