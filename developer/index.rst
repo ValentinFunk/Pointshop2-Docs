@@ -33,7 +33,7 @@ Modification Guidelines
 ***********************
 #. **Never modify code files**: When extending or modifying pointshop 2 the first guideline is to never modify any of the core files. You can use hooks and global functions to extend the script or modify functionality. This makes sure that there are as little conflicts between addons as possible. If you need a specific hook or if modification of core files is a much easier solution to a general problem, please get in touch.
 
-#. **Skin your panels only in derma skins**: To make sure that skins can provide a consistentexperience, it is important that Paint functions are never directly overwritten. Instead use Derma_Hook and extend the base skin. This gives skin creator the chance to support your addon without messy hooks and overwrites.
+#. **Skin your panels only in derma skins**: To make sure that skins can provide a consistent experience, it is important that Paint functions are never directly overwritten. Instead use Derma_Hook and extend the base skin. This gives skin creator the chance to support your addon without messy hooks and overwrites.
 
 #. **Avoid global variables**: Use local variables or create a single global table for your addon to store globals. This avoids cluttering the global namespace, is faster and avoids conflicts.
 
