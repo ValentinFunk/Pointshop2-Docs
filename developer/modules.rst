@@ -210,7 +210,8 @@ The only thing left to do now is to link the item to the menu and register it wi
 
 Example:
 
-.. highlight:lua::
+.. highlight:: lua
+.. code-block:: lua
 
     MODULE.Blueprints = {
     {
@@ -227,7 +228,8 @@ Slots are created using the function :lua:fun:`Pointshop2.AddEquipmentSlot`
 
 Example:
 
-.. hightlight:lua::
+.. highlight:: lua
+.. code-block:: lua
     
     Pointshop2.AddEquipmentSlot( "Example", function( item )
     	--Check if the item is an example item
