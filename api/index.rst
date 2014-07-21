@@ -104,7 +104,8 @@ Modules
     The bath is seperated by ``.`` characters. 
     
     Example:
-    .. highlight:: lua
+    
+.. highlight:: lua
         print(Pointshop2.GetSetting("TTTIntegration", "RoundWin.Innocent"))
         
 .. lua:function:: Pointshop2.AddEquipmentSlot(name, itemValidFunction)
@@ -114,3 +115,37 @@ Modules
     **Name**:label of the slot that is shown underneath the slot's panel in the inventory.
     **itemValidFunction**: A function that takes an item as an argument and returns whether or not it can be equipped in the slot.
     
+.. lua:function:: Pointshop2:AddTab(label, controlName, shouldShow)
+
+    Adds a new tab to the top navigation of the pointshop.
+    
+    ``label``: The label of the tab
+    ``controlName``: The derma control that is created as panel
+    ``shouldShow``: **optional** A function returning whether or not the player should be able to see this tab
+
+.. lua:function:: Pointshop2:AddManagementPanel(label, icon, controlName, shouldShow)
+
+    Adds a new tab to the side navigation of the management panel.
+    
+    ``label``: The label of the tab
+    ``icon``: The tab's icon
+    ``controlName``: The derma control that is created as panel
+    ``shouldShow``: **optional** A function returning whether or not the player should be able to see this tab
+    
+    Example:
+
+.. highlight:: lua
+        derma.DefineControl( "DPointshopManagementTab_Settings", "", PANEL, "DPanel" )
+
+        Pointshop2:AddManagementPanel( "Settings", "pointshop2/advanced.png", "DPointshopManagementTab_Settings", function( )
+            return PermissionInterface.query( LocalPlayer(), "pointshop2 managemodules" )
+        end )
+        
+.. lua:function:: Pointshop2:AddInventoryPanel(label, icon, controlName, shouldShow)
+
+    Adds a new tab to the side navigation of the management panel.
+    
+    ``label``: The label of the tab
+    ``icon``: The tab's icon
+    ``controlName``: The derma control that is created as panel
+    ``shouldShow``: **optional** A function returning whether or not the player should be able to see this tab
