@@ -250,5 +250,5 @@ Adding custom Settings
 
 Adding custom Tabs
 ==================
-.. todo::
-    Docs for creating tabs
+It is possible to add new tabs to various sections of the shop. 
+You can add a tab to the top navigation by using :lua:func:`Pointshop2.AddTab`. Inside of the inventory tab you can add pages to the side navigation by using :lua:func:`Pointshop2:AddInventoryPanel`. It is also possible to add new pages to the side nav of the management tab by using :lua:func:`Pointshop2:AddManagementPanel`.
