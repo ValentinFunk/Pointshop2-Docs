@@ -105,7 +105,8 @@ Modules
     
     Example:
     
-.. highlight:: lua
+    .. code-block:: lua
+    
         print(Pointshop2.GetSetting("TTTIntegration", "RoundWin.Innocent"))
         
 .. lua:function:: Pointshop2.AddEquipmentSlot(name, itemValidFunction)
@@ -119,22 +120,23 @@ Modules
 
     Adds a new tab to the top navigation of the pointshop.
     
-    ``label``: The label of the tab
-    ``controlName``: The derma control that is created as panel
-    ``shouldShow``: **optional** A function returning whether or not the player should be able to see this tab
+    - **label**: The label of the tab.
+    - **controlName**: The derma control that is created as panel.
+    - **shouldShow**: **optional** A function returning whether or not the player should be able to see this tab.
 
 .. lua:function:: Pointshop2:AddManagementPanel(label, icon, controlName, shouldShow)
 
     Adds a new tab to the side navigation of the management panel.
     
-    ``label``: The label of the tab
-    ``icon``: The tab's icon
-    ``controlName``: The derma control that is created as panel
-    ``shouldShow``: **optional** A function returning whether or not the player should be able to see this tab
+    - **label**: The label of the tab
+    - **icon**: The tab's icon
+    - **controlName**: The derma control that is created as panel
+    - **shouldShow**: **optional** A function returning whether or not the player should be able to see this tab
     
     Example:
 
-.. highlight:: lua
+    .. code-block:: lua
+    
         derma.DefineControl( "DPointshopManagementTab_Settings", "", PANEL, "DPanel" )
 
         Pointshop2:AddManagementPanel( "Settings", "pointshop2/advanced.png", "DPointshopManagementTab_Settings", function( )
@@ -145,7 +147,7 @@ Modules
 
     Adds a new tab to the side navigation of the management panel.
     
-    ``label``: The label of the tab
-    ``icon``: The tab's icon
-    ``controlName``: The derma control that is created as panel
-    ``shouldShow``: **optional** A function returning whether or not the player should be able to see this tab
+    - **label**: The label of the tab
+    - **icon**: The tab's icon
+    - **controlName**: The derma control that is created as panel
+    - **shouldShow**: **optional** A function returning whether or not the player should be able to see this tab
