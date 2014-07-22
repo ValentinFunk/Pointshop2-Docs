@@ -100,9 +100,11 @@ Modules
    
 .. lua:function:: Poinsthop2.GetSetting(moduleName, path)
 
-    Returns the value of a setting from the given module according to the path.
-    The bath is seperated by ``.`` characters. 
+    Retrieves a setting value that was defined in MODULE.Settings. Automatically uses the default or database saved value.
     
+    - **modName**: The MODULE.Name of the module where the setting is defined
+    - **path**: The category and name of the setting, seperated by a "."
+
     Example:
     
     .. code-block:: lua
@@ -151,3 +153,17 @@ Modules
     - **icon**: The tab's icon
     - **controlName**: The derma control that is created as panel
     - **shouldShow**: **optional** A function returning whether or not the player should be able to see this tab
+    
+.. lua:class:: Configurator
+
+    Interface for Configurator controls. Used by the settings section.
+
+    .. lua:method:: SetModule(module)
+        
+        Passes the :lua:class:`MODULE` table to the control.
+        
+    .. lua:method:: SetData(data)
+    
+        Passes the Settings as retrieved from the server to the control.
+        data contains Server and Shared settings merged together.
+    
