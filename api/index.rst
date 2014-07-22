@@ -98,7 +98,7 @@ Modules
 
    Registers a :lua:class:`MODULE` to be used with Pointshop 2. 
    
-.. lua:function:: Poinsthop2.GetSetting(moduleName, path)
+.. lua:function:: Pointshop2.GetSetting(moduleName, path)
 
     Retrieves a setting value that was defined in MODULE.Settings. Automatically uses the default or database saved value.
     
