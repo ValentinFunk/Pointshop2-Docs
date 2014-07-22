@@ -266,15 +266,15 @@ Example:
 
 .. code-block:: lua
 
-	MODULE.Settings.Server.Kills = {
-		info = {
-		label = "Kill Rewards"
-		},
-		DelayReward = {
-			value = true,
-			label = "Delay Rewards until round end",
-			tooltip = "Use this to prevent players to meta-game using the kill notifications. Kill points are collected and awarded at round end.",
-		},
+    MODULE.Settings.Server.Kills = {
+        info = {
+            label = "Kill Rewards"
+        },
+        DelayReward = {
+            value = true,
+            label = "Delay Rewards until round end",
+            tooltip = "Use this to prevent players to meta-game using the kill notifications. Kill points are collected and awarded at round end.",
+        },
     }
 
 In this example a server-side category "Kills" is created, with the label "Kill Rewards" and a single (boolean) setting called DelayReward. The path of this setting would be "Kills.DelayReward".
