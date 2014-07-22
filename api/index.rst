@@ -75,14 +75,14 @@ Modules
         
     .. lua:attribute:: Blueprints 
         
-        A table containing :lua:class:`Blueprint`s that players can use.
+        A table containing :lua:class:`Blueprint` s that players can use.
         
     .. lua:attribute:: Settings 
         
         A table containing the settings of the module. A seperate table for each realm exists.
         ``Settings.Server`` is only sent to admins when changing the settings, ``Settings.Shared`` is synced with all clients.
-        Accessing Settings is done by calling :lua:func:`Pointshop2.GetSetting`.
-        Each realm settings table defines Settings that can be accessed and configured easily and can contain multiple ``SettingsCategory``s.
+        Accessing Settings is done by calling :lua:func:`Pointshop2.GetSetting` .
+        Each realm settings table defines Settings that can be accessed and configured easily and can contain multiple ``SettingsCategory`` s.
         Settings registered this way are automatically saved the the database when changed.
         
     .. lua:attribute:: SettingsButton 
