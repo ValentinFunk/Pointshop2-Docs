@@ -267,14 +267,14 @@ Example:
 .. code-block:: lua
 
 	MODULE.Settings.Server.Kills = {
-        info = {
-          label = "Kill Rewards"
-        },
-        DelayReward = {
-            value = true,
-            label = "Delay Rewards until round end",
-            tooltip = "Use this to prevent players to meta-game using the kill notifications. Kill points are collected and awarded at round end.",
-        },
+		info = {
+		label = "Kill Rewards"
+		},
+		DelayReward = {
+			value = true,
+			label = "Delay Rewards until round end",
+			tooltip = "Use this to prevent players to meta-game using the kill notifications. Kill points are collected and awarded at round end.",
+		},
     }
 
 In this example a server-side category "Kills" is created, with the label "Kill Rewards" and a single (boolean) setting called DelayReward. The path of this setting would be "Kills.DelayReward".
@@ -287,7 +287,7 @@ The next step is to define a button which can be used to open the settings edito
 
 Example:
 
-.. code-block:lua::
+.. code-block:: lua
 
     MODULE.SettingButtons = {
         {
@@ -308,7 +308,7 @@ The easiest way is to simply create a control inheriting from ``DSettingsEditor`
 
 Example:
 
-.. code-block:lua::
+.. code-block:: lua
 
     local PANEL = {}
     
