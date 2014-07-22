@@ -73,7 +73,8 @@ You can use this template:
     	    -- it is received from the database
     		ItemPersistence = {
     			class = "Pointshop2.ItemPersistence",
-    			foreignKey = "itemPersistenceId"
+    			foreignKey = "itemPersistenceId",
+    			onDelete = "CASCADE" --Persistence is deleted when the base is deleted. This is required.
     		}
     	}
     }
