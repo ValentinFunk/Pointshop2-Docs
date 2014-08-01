@@ -7,7 +7,7 @@ Pointshop2 documentation
 ========================
 
 Pointshop 2 is the next generation shop system for Garry's Mod. 
-It's features include:
+Its features include:
 
 - Live item editing
 - Lua-less creation of items
@@ -15,6 +15,8 @@ It's features include:
 - PAC3 Integration
 
 The script can be found at http://coderhire.com/scripts/view/1207
+
+This is the documentation site for Pointshop 2. You can find guides and explanation of various options here. If you are a developer you will also find detailed instructions for interacting with the script.
 
 .. toctree::
    :maxdepth: 4
