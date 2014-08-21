@@ -75,14 +75,14 @@ Modules
         
     .. lua:attribute:: Blueprints 
         
-        A table containing :lua:class:`Blueprint`s that players can use.
+        A table containing :lua:class:`Blueprint` s that players can use.
         
     .. lua:attribute:: Settings 
         
         A table containing the settings of the module. A seperate table for each realm exists.
         ``Settings.Server`` is only sent to admins when changing the settings, ``Settings.Shared`` is synced with all clients.
-        Accessing Settings is done by calling :lua:func:`Pointshop2.GetSetting`.
-        Each realm settings table defines Settings that can be accessed and configured easily and can contain multiple ``SettingsCategory``s.
+        Accessing Settings is done by calling :lua:func:`Pointshop2.GetSetting` .
+        Each realm settings table defines Settings that can be accessed and configured easily and can contain multiple ``SettingsCategory`` s.
         Settings registered this way are automatically saved the the database when changed.
         
     .. lua:attribute:: SettingsButton 
@@ -98,13 +98,17 @@ Modules
 
    Registers a :lua:class:`MODULE` to be used with Pointshop 2. 
    
-.. lua:function:: Poinsthop2.GetSetting(moduleName, path)
+.. lua:function:: Pointshop2.GetSetting(moduleName, path)
 
-    Returns the value of a setting from the given module according to the path.
-    The bath is seperated by ``.`` characters. 
+    Retrieves a setting value that was defined in MODULE.Settings. Automatically uses the default or database saved value.
     
+    - **modName**: The MODULE.Name of the module where the setting is defined
+    - **path**: The category and name of the setting, seperated by a "."
+
     Example:
-    .. highlight:: lua
+    
+    .. code-block:: lua
+    
         print(Pointshop2.GetSetting("TTTIntegration", "RoundWin.Innocent"))
         
 .. lua:function:: Pointshop2.AddEquipmentSlot(name, itemValidFunction)
@@ -113,6 +117,55 @@ Modules
     
     **Name**:label of the slot that is shown underneath the slot's panel in the inventory.
     **itemValidFunction**: A function that takes an item as an argument and returns whether or not it can be equipped in the slot.
+    
+.. lua:function:: Pointshop2:AddTab(label, controlName, shouldShow)
+
+    Adds a new tab to the top navigation of the pointshop.
+    
+    - **label**: The label of the tab.
+    - **controlName**: The derma control that is created as panel.
+    - **shouldShow**: **optional** A function returning whether or not the player should be able to see this tab.
+
+.. lua:function:: Pointshop2:AddManagementPanel(label, icon, controlName, shouldShow)
+
+    Adds a new tab to the side navigation of the management panel.
+    
+    - **label**: The label of the tab
+    - **icon**: The tab's icon
+    - **controlName**: The derma control that is created as panel
+    - **shouldShow**: **optional** A function returning whether or not the player should be able to see this tab
+    
+    Example:
+
+    .. code-block:: lua
+    
+        derma.DefineControl( "DPointshopManagementTab_Settings", "", PANEL, "DPanel" )
+
+        Pointshop2:AddManagementPanel( "Settings", "pointshop2/advanced.png", "DPointshopManagementTab_Settings", function( )
+            return PermissionInterface.query( LocalPlayer(), "pointshop2 managemodules" )
+        end )
+        
+.. lua:function:: Pointshop2:AddInventoryPanel(label, icon, controlName, shouldShow)
+
+    Adds a new tab to the side navigation of the management panel.
+    
+    - **label**: The label of the tab
+    - **icon**: The tab's icon
+    - **controlName**: The derma control that is created as panel
+    - **shouldShow**: **optional** A function returning whether or not the player should be able to see this tab
+    
+.. lua:class:: Configurator
+
+    Interface for Configurator controls. Used by the settings section.
+
+    .. lua:method:: SetModule(module)
+        
+        Passes the :lua:class:`MODULE` table to the control.
+        
+    .. lua:method:: SetData(data)
+    
+        Passes the Settings as retrieved from the server to the control.
+        data contains Server and Shared settings merged together.
     
 Player integration
 ------------------
@@ -143,5 +196,3 @@ Player integration
     Adds premium points to a player's wallet.
     
     **points**: Amount of points given
-
-    

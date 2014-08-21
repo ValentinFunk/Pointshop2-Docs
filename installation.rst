@@ -20,7 +20,7 @@ Final structure when everything is installed:
 Configuration
 -------------
 Pointshop2 requires no initial configuration! Once it is installed you are ready to go!
-Restart your server and press F3 to open the menu. If nothing happens, use the "pointshop2" console command.
+Restart your server and press F3 to open the menu.
 You can find all settings under the "Management" tab.
 
 FastDL
@@ -34,12 +34,12 @@ Make sure to upload them into your fastdl's root folder, i.e. *addons/pointshop2
 
 
 Advanced Configuration
-======================
+----------------------
 
 There are a few options in Pointshop2 that can be used to integrate the script more tightly into your system.
 
 MySQL Setup
------------
+***********
 By default SQLite (via sv.db) is used to store all player and pointshop data. If you have a MySQL server you can also use MySQL with the script. This has the advantage of being more efficient for large amounts of data, enabling you to share items across multiple servers and allowing you to display data on the web. 
 
 Switching from SQLite to MySQL means that the pointshop is reset - the data is not transferred across. If you wish to keep your data you have to manually export it.

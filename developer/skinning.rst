@@ -3,7 +3,7 @@ Creating Pointshop Skins
 
 Pointshop 2 skins are implemented as derma skins. This means that the Paint functions
 of Panels are passed to a skin. If you are creating a skin you cannot overwrite or modify
-any of the files but have to do your skinning entirely through a skin.any
+any of the files but have to do your skinning entirely through a skin.
 
 The name of the skin which is used is set within the main configuration file at 
 *lua/ps2/shared/sh_config.lua*. The default flatui skin can be found in *lua/ps2/client/cl_dermaskin_flatui.lua*.

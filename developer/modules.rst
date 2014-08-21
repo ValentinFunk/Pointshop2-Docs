@@ -12,7 +12,7 @@ the file prefix (sh, cl, sv). Client files are automatically AddCSLuaFile'd.
 
 
 Within this folder the module description file *sh_module.lua* needs to be placed.
-Here you set up the module table (:lua:class:`MODULE`) which contains information such as the author and name of the module, then register it using :lua:func:`Poinsthop2.RegisterModule(MODULE)`.
+Here you set up the module table (:lua:class:`MODULE`) which contains information such as the author and name of the module, then register it using :lua:func:`Poinsthop2.RegisterModule`.
 
 Adding custom Item Types
 ========================
@@ -73,7 +73,8 @@ You can use this template:
     	    -- it is received from the database
     		ItemPersistence = {
     			class = "Pointshop2.ItemPersistence",
-    			foreignKey = "itemPersistenceId"
+    			foreignKey = "itemPersistenceId",
+    			onDelete = "CASCADE" --Persistence is deleted when the base is deleted. This is required.
     		}
     	}
     }
@@ -244,11 +245,97 @@ Example:
 
 Adding custom Settings
 ======================
-.. todo::
-    Docs for creating settigns
+
+Pointshop 2 has a builtin, extensible settings system. A module can add custom settings buttons to the builtin settings tab (Management -> Settings) which can then be used to create a GUI. The system first initializes the settings from the Lua table and copies the defaults, then reads settings from the database.
+To create custom settings you need the following components: the settings table, a settings button and a settings editor.
+
+
+The Settings Table
+******************
+
+The settings table is a table defined inside of *sh_module.lua*:
+
+.. code-block:: lua
     
+    MODULE.Settings = {}
+    MODULE.Settings.Server = {}
+    MODULE.Settings.Shared = {}
+
+The table is devided into server and shared settings. Shared settings are synchronized with all clients, server settings are only available on the server.
+Each of these tables can contain multiple :lua:class:`SettingsCategory`s. A category consists of a path, an info table and a number of Settings attached to it.
+Example:
+
+.. code-block:: lua
+
+    MODULE.Settings.Server.Kills = {
+        info = {
+            label = "Kill Rewards"
+        },
+        DelayReward = {
+            value = true,
+            label = "Delay Rewards until round end",
+            tooltip = "Use this to prevent players to meta-game using the kill notifications. Kill points are collected and awarded at round end.",
+        },
+    }
+
+In this example a server-side category "Kills" is created, with the label "Kill Rewards" and a single (boolean) setting called DelayReward. The path of this setting would be "Kills.DelayReward".
+You can add as many categories and settings as you like. Be careful not to define a setting in both, the shared and server table with the same path which could lead to conflicts.
+
+Settings Button
+***************
+
+The next step is to define a button which can be used to open the settings editor. This is also done within *sh_module.lua*.
+
+Example:
+
+.. code-block:: lua
+
+    MODULE.SettingButtons = {
+        {
+            label = "Point Rewards",
+            icon = "pointshop2/hand129.png",
+            control = "DTerrortownConfigurator"
+        }
+    }
+
+This defines a button with the label "Point Rewards" and the icon "pointshop2/hand129.png". On click a DTerrortownConfigurator control is created. The control should implement the :lua:class:`Configurator` interface. For details see the next section.
+
+Adding the Configurator
+***********************
+
+Within your module create a new clientside file where you define the configurator control. The configurator control is a derma control which has the methods of the :lua:class:`Configurator` interface.
+
+The easiest way is to simply create a control inheriting from ``DSettingsEditor`` and using the method ``AutoAddSettingsTable``. This automatically populates the settings window with the appropriate input elements for each type you supplied in the settings table.
+
+Example:
+
+.. code-block:: lua
+
+    local PANEL = {}
+    
+    function PANEL:Init( )
+        self:SetSkin( Pointshop2.Config.DermaSkin )
+        self:SetTitle( "TTT Reward Settings" )
+        self:SetSize( 300, 600 )
+        
+        self:AutoAddSettingsTable( Pointshop2.GetModule( "TTT Integration" ).Settings.Server, self )
+        self:AutoAddSettingsTable( Pointshop2.GetModule( "TTT Integration" ).Settings.Shared, self )
+    end
+    
+    function PANEL:DoSave( )
+        Pointshop2View:getInstance( ):saveSettings( self.mod, "Shared", self.settings )
+    end
+    
+    derma.DefineControl( "DTerrortownConfigurator", "", PANEL, "DSettingsEditor" )
+
+This example adds all, shared and server settings to the configurator and sends them to the server on save. This is all that is needed to create modifiable, synchronized settings that are saved to the database and can be changed using an ingame editor.
+
+Accessing the Settings
+***********************
+
+To use the settings in your script simply use :lua:func:`Pointshop2.GetSetting`. 
 
 Adding custom Tabs
 ==================
-.. todo::
-    Docs for creating tabs
+It is possible to add new tabs to various sections of the shop. 
+You can add a tab to the top navigation by using :lua:func:`Pointshop2:AddTab`. Inside of the inventory tab you can add pages to the side navigation by using :lua:func:`Pointshop2:AddInventoryPanel`. It is also possible to add new pages to the side nav of the management tab by using :lua:func:`Pointshop2:AddManagementPanel`.

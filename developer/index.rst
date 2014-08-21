@@ -1,8 +1,9 @@
 Developer Information
 =====================
 
-Pointshop2 was designed with modification, customization and extension in mind.
-Wether you are extending or modifying the script, please follow the guildelines explained here.
+Pointshop2 was designed with modification, customization and extension in mind. You are welcome to modify or add to the script through coderhire jobs, scripts or private modifications. The following pages are designed to help you work with the addon.
+Whether you are extending or modifying the script, please follow the guildelines explained here.
+
 
 
 Terms, Agreement and General Guidelines 
@@ -11,8 +12,8 @@ Terms, Agreement and General Guidelines
 Pointshop 2 is designed to be a quality script. To maintain this experience to the user
 addons and modifications need to conform to a high technical quality standard. You are obliged to
 follow and adhere to these terms, otherwise you are not permitted to modify, use or look into the source 
-code of pointshop2.
-
+code of pointshop 2.
+ 
 Code Review Process
 *******************
 To enforce the quality requirements to Pointshop 2 addons, it is mandatory to have it reviewed by
@@ -29,11 +30,32 @@ Follow up code reviews and code reviews for updates are free.
 Support and information during the creation of a script are free. If you have any problems or a question about the codebase or
 require additional functionality do not hesitate to get in touch via steam, coderhire PM or email.
 
+To summarize:
+For free (public scripts) or a small fee (commercial scripts) you get:
+
+- Personal support
+- Code review and quality assurance
+- Compatibility testing against all addons in the program
+- Listed on the script's page and officiall endorsement by Pointshop 2
+- Promotion through Pointshop 2 communication channels
+
+Requirements that will be checked:
+
+- Support for both, MySQL and SQLite
+- Configuration possible through GUI, no lua configs
+- Possibility to completely reset the addon
+- Adherence to modification guidelines
+
+Developer License
+---------------------------------------
+
+If you do not plan to use pointshop 2 on a server but want to create an addon to it, you can request a discounted developer license. The license is available for 10$ and includes a **free** code review for a single addon. To request a license please contact Kamshak via `e-mail <mailto:funk.valentin@gmail.com>`_. Please include your experience/previous work and a rough description of what you want to add to the shop.
+
 Modification Guidelines
 ***********************
 #. **Never modify code files**: When extending or modifying pointshop 2 the first guideline is to never modify any of the core files. You can use hooks and global functions to extend the script or modify functionality. This makes sure that there are as little conflicts between addons as possible. If you need a specific hook or if modification of core files is a much easier solution to a general problem, please get in touch.
 
-#. **Skin your panels only in derma skins**: To make sure that skins can provide a consistentexperience, it is important that Paint functions are never directly overwritten. Instead use Derma_Hook and extend the base skin. This gives skin creator the chance to support your addon without messy hooks and overwrites.
+#. **Skin your panels only in derma skins**: To make sure that skins can provide a consistent experience, it is important that Paint functions are never directly overwritten. Instead use Derma_Hook and extend the base skin. This gives skin creator the chance to support your addon without messy hooks and overwrites.
 
 #. **Avoid global variables**: Use local variables or create a single global table for your addon to store globals. This avoids cluttering the global namespace, is faster and avoids conflicts.
 
