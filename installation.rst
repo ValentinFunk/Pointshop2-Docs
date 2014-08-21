@@ -20,7 +20,7 @@ Final structure when everything is installed:
 Configuration
 -------------
 Pointshop2 requires no initial configuration! Once it is installed you are ready to go!
-Restart your server and press F3 to open the menu. If nothing happens, use the "pointshop2" console command.
+Restart your server and press F3 to open the menu.
 You can find all settings under the "Management" tab.
 
 FastDL
