@@ -174,11 +174,11 @@ Player integration
     
     In Pointshop 2 points are stored in a player's **wallet**. A wallet is a LibK model instance, you can use :save() on it after changing it.
 
-    .. lua:attribute:points:
+    .. lua:attribute:: points 
     
         The standard points of a player.
         
-    .. lua:attribute:premiumPoints:
+    .. lua:attribute:: premiumPoints 
     
         The premium (donator) points of a player
         
