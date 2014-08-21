@@ -114,3 +114,34 @@ Modules
     **Name**:label of the slot that is shown underneath the slot's panel in the inventory.
     **itemValidFunction**: A function that takes an item as an argument and returns whether or not it can be equipped in the slot.
     
+Player integration
+------------------
+
+.. lua:class:: Wallet
+    
+    In Pointshop 2 points are stored in a player's **wallet**. A wallet is a LibK model instance, you can use :save() on it after changing it.
+
+    .. lua:attribute:points:
+    
+        The standard points of a player.
+        
+    .. lua:attribute:premiumPoints:
+    
+        The premium (donator) points of a player
+        
+        
+.. lua:function:: PLAYER:PS2_AddStandardPoints(points, message, small)
+
+    Awards points to a player. If a message is specified it will show up in their pointfeed.
+    
+    **points**: Amount of points given
+    **message**: Message displayed to the pointfeed
+    **small**: Use the small print (for bonus points related to a primary event)
+    
+.. lua:function:: PLAYER:PS2_AddPremiumPoints(points)
+    
+    Adds premium points to a player's wallet.
+    
+    **points**: Amount of points given
+
+    
