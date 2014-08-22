@@ -1,7 +1,7 @@
 Getting and Setting player points
 =================================
 
-In Pointshop 2 points are stored in a player's *wallet*(:lua:class:`Wallet`). A wallet is a table that contains points and premiumPoints.
+In Pointshop 2 points are stored in a player's wallet (:lua:class:`Wallet`). A wallet is a table that contains points and premiumPoints.
 
 Wallets are only networked to their owner and to all admins.
 
