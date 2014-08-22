@@ -51,3 +51,18 @@ To enable MySQL please follow these steps:
 #. **Enable MySQL within LibK**: LibK is used for all database operations of Pointshop2. To enable MySQL support go into the configuration file *addons/libk/lua/libk/server/sv_libk_config.lua*. Set ``LibK.SQL.UseMysql = true`` and update the remaining settings with your database connection details. If you are hosting the database on a different machine than the gamemserver, make sure to allow external connections to the database. 
 
 #. **Test the configuration**: After a server restart Pointshop2 will now connect to MySQL. If there are any errors when connecting to the database they will be shown in the server console and logged to garrysmod/data/LibK_Error.txt serverside.
+
+Troubleshooting and reporting bugs
+----------------------------------
+
+When you are experiencing issues with pointshop 2 please follow these steps. For a fast solution include as much information as possible. Report bugs and problems only through coderhire tickets.
+
+#. **Turn on debug mode**: Follow the steps outlined here to enable verbose logging: :ref:`dev-options`.
+
+#. **Create a minimal test case**: Try to reduce the steps needed to create the problem. Once you have found the quickest reliable way to create a problem note down the steps in a step by step fashion.
+
+#. **Capture the load log**: When the script loads it outputs a lot of information to the console. In your report include this, from both server and client console. If something goes wrong during load other errors can happen. The load log is printed on connect (clientside) and after a map change (serverside).
+
+#. **Include client and server console logs**: Include the client and server console logs from when the issue happens. Include a bit before and after, including too much is not a problem. Use a pastebin like http://privatepaste.com/ for storing the information.
+
+#. **Include server configuration**: Are you using MySQL or SQLite? Do you use any custom extensions or any DLC? Which administration mod do you use? Which gamemode do you run?

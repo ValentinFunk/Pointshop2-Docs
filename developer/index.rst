@@ -71,6 +71,7 @@ that make it very easy to extend the script.
 
 After that a good way to start is to check out the examples.
 
+.. _dev-options:
 Developer Options
 -----------------
 To make development and debugging of the script easier there are a few options for developers. If you experience any errors please also turn these settings on as it will help track errors down.
