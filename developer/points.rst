@@ -3,7 +3,7 @@ Getting and Setting player points
 
 In Pointshop 2 points are stored in a player's wallet (:lua:class:`Wallet`). A wallet is a table that contains points and premiumPoints.
 
-Wallets are only networked to their owner and to all admins.
+Wallets are only networked to their owner and to all admins by default. If you want to display points on a scoreboard, you need to tick the setting "Broadcast Wallets" in the General Settings. This will send everyone's wallet to everyone.
 
 Use ply.PS2_Wallet to access a player's wallet. To manipulate a wallet use
 
