@@ -18,5 +18,7 @@ There is also a console command available to give points to a specific steamid. 
     Gives points to a specific SteamID. Works even if the player has never joined the server.
     
     **steamId**: SteamID of the player in the STEAM_x_x:xxxxxxxxxx format
+    
     **currencyType**: Currency to give. Can be points or premiumPoints
+    
     **points**: Amount of points to give
