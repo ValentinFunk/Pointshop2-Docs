@@ -10,3 +10,13 @@ Use ply.PS2_Wallet to access a player's wallet. To manipulate a wallet use
 :lua:func:`PLAYER:PS2_AddPremiumPoints`
 
 :lua:func:`PLAYER:PS2_AddStandardPoints`
+
+There is also a console command available to give points to a specific steamid. You can use this with your donation system:
+
+.. lua:function:: ps2_addpoints <steamId> <currencyType> <points>
+
+    Gives points to a specific SteamID. Works even if the player has never joined the server.
+    
+    **steamId**: SteamID of the player in the STEAM_x_x:xxxxxxxxxx format
+    **currencyType**: Currency to give. Can be points or premiumPoints
+    **points**: Amount of points to give
