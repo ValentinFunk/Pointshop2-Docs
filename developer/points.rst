@@ -41,8 +41,8 @@ To give an item to a player you can use
 Examples:
 In these examples please note that there can be multiple items with the same print name. It is better to give an item by class name. To determine the class name you either look at the database directly (className is the persistence id of the item) or use PrintTable(Pointshop2.GetRegisteredItems())
 
-.. code-block:: lua
-		/*
+.. highlight:: lua
+	/*
 	 *	Gives a random item from the shop to a player
 	 */
 	function GiveRandomItem( ply )
