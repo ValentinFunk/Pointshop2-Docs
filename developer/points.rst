@@ -38,7 +38,9 @@ To give an item to a player you can use
     
     **suppressNotify**: [OPTIONAL] If set to true the "New Item Received" popup doesn't show up.
 
-Examples:
+Examples
+********
+
 In these examples please note that there can be multiple items with the same print name. It is better to give an item by class name. To determine the class name you either look at the database directly (className is the persistence id of the item) or use PrintTable(Pointshop2.GetRegisteredItems())
 
 .. highlight:: lua
