@@ -22,3 +22,43 @@ There is also a console command available to give points to a specific steamid. 
     **currencyType**: Currency to give. Can be points or premiumPoints
     
     **points**: Amount of points to give
+
+Giving Items
+============
+ 
+To give an item to a player you can use
+.. lua:function:: PLAYER:PS2_EasyAddItem( itemClassName, purchaseData, suppressNotify )
+
+    Gives an item to the player.
+    
+    **itemClassName**: Class name of the item
+    
+    **purchaseData**: [OPTIONAL] A table in the format { time = os.time(), amount = 123, currency = "points", origin = "LUA" }. amount is a number, currency can be "points" or "premiumPoints". This is used to calculate the sell price of the item. Origin is a string to track how the item was given. It has no set format.
+    
+    **suppressNotify**: [OPTIONAL] If set to true the "New Item Received" popup doesn't show up.
+
+Examples:
+In these examples please note that there can be multiple items with the same print name. It is better to give an item by class name. To determine the class name you either look at the database directly (className is the persistence id of the item) or use PrintTable(Pointshop2.GetRegisteredItems())
+
+.. code-block:: lua
+		/*
+	 *	Gives a random item from the shop to a player
+	 */
+	function GiveRandomItem( ply )
+		local items = Pointshop2.GetRegisteredItems( )
+		local itemClass = table.Random( items )
+		return ply:PS2_EasyAddItem( itemClass.className )
+	end
+	GiveRandomItem( player.GetByID( 1 ) )
+
+	/*
+	 *	Gives a item with the specified name to the player
+	 */
+	function GiveItemByPrintName( ply, printName )
+		local itemClass = Pointshop2.GetItemClassByPrintName( printName )
+		if not itemClass then
+			error( "Invalid item " .. tostring( printName ) )
+		end
+		return ply:PS2_EasyAddItem( itemClass.className )
+	end
+	GiveItemByPrintName( player.GetByID( 1 ), "Gas Mask" )
