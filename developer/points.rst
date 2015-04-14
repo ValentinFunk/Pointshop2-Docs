@@ -27,6 +27,7 @@ Giving Items
 ============
  
 To give an item to a player you can use
+
 .. lua:function:: PLAYER:PS2_EasyAddItem( itemClassName, purchaseData, suppressNotify )
 
     Gives an item to the player.
