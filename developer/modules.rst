@@ -42,9 +42,7 @@ Creating a persistence
 
 The first step when creating a custom item type is to create it's persistence. A persistence needs to be a LibK model, which is done by including the ``DatabaseModel`` mixin. 
 
-Create a new file within your module called **sh_model_<itemname>persistence.lua**.
-
-You can use this template:
+Create a new file within your module called **sh_model_<itemname>persistence.lua**:
 
 .. highlight:: lua
 .. code-block:: lua
@@ -93,7 +91,7 @@ Implementing saving and updating logic
 
 When a pointshop item is created using an Item Creator, the persistence is passed a "save table". This table's structure is filled by the Item Creator Derma Control. Usually it simply contains the model fields. The same function is called for updating items once they are modified. For this the static function ``createOrUpdateFromSaveTable`` has to be added. It creates (or on update retrieves) an instance of the own and any required models and then saves it to the database. All fields that the user can configure when creating a custom item need to be included into the model.
 
-For simple items you can follow this template. Add the following to your persistence file you created in the last step:
+Add the following to your persistence file you created in the last step:
 
 
 .. highlight:: lua
