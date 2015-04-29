@@ -253,6 +253,7 @@ The settings table is a table defined inside of *sh_module.lua*:
 
 The table is devided into server and shared settings. Shared settings are synchronized with all clients, server settings are only available on the server.
 Each of these tables can contain multiple :lua:class:`SettingsCategory`s. A category consists of a path, an info table and a number of Settings attached to it.
+
 Example:
 
 .. code-block:: lua
