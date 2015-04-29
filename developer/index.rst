@@ -6,50 +6,11 @@ Whether you are extending or modifying the script, please follow the guildelines
 
 
 
-Terms, Agreement and General Guidelines 
----------------------------------------
-
-Pointshop 2 is designed to be a quality script. To maintain this experience to the user
-addons and modifications need to conform to a high technical quality standard. You are obliged to
-follow and adhere to these terms, otherwise you are not permitted to modify, use or look into the source 
-code of pointshop 2.
- 
-Code Review Process
-*******************
-To enforce the quality requirements to Pointshop 2 addons, it is mandatory to have it reviewed by
-the author of Pointshop2. Independent of the addon's size and function it is necessary to get approval 
-prior to publishing the script. Pointshop 2 is designed to be extended and modified through external scripts,
-which is why as a developer you will receive support working with the codebase.
-
-The code review is **free for publicly released scripts** and is available at a **fee of 10$ for every commercial script** (this includes coderhire jobs and scripts). This fee is used to maintain and update the developer documentation, add new functions and APIs for you to use and to provide premium support and advice when writing plugins. It also serves as a guard to protect against "5 second scripts" and low quality, hacked together scripts. Please note that if you do not comply to this agreement, your script will not be approved.
-
-During the code review the code will be checked for exploits, problems with the existing codebase and incompatibilities with existing and future addons.
-You will receive a written summary of the review and proposed changes. After fixing these problems you will receive a green light to release the addon. 
-Follow up code reviews and code reviews for updates are free.
-
-Support and information during the creation of a script are free. If you have any problems or a question about the codebase or
-require additional functionality do not hesitate to get in touch via steam, coderhire PM or email.
-
-To summarize:
-For free (public scripts) or a small fee (commercial scripts) you get:
-
-- Personal support
-- Code review and quality assurance
-- Compatibility testing against all addons in the program
-- Listed on the script's page and officiall endorsement by Pointshop 2
-- Promotion through Pointshop 2 communication channels
-
-Requirements that will be checked:
-
-- Support for both, MySQL and SQLite
-- Configuration possible through GUI, no lua configs
-- Possibility to completely reset the addon
-- Adherence to modification guidelines
 
 Developer License
 ---------------------------------------
 
-If you do not plan to use pointshop 2 on a server but want to create an addon to it, you can request a discounted developer license. The license is available for 10$ and includes a **free** code review for a single addon. To request a license please contact Kamshak via `e-mail <mailto:funk.valentin@gmail.com>`_. Please include your experience/previous work and a rough description of what you want to add to the shop.
+If you do not plan to use pointshop 2 on a server but want to create an addon to it, you can request a discounted developer license. The license is available for 10$. To request a license please contact Kamshak via `e-mail <mailto:funk.valentin@gmail.com>`_. Please include your experience/previous work and a rough description of what you want to add to the shop.
 
 Modification Guidelines
 ***********************
@@ -61,7 +22,7 @@ Modification Guidelines
 
 #. **Avoid direct database queries**: Pointshop 2 makes heavy use of LibK as a database abstraction layer. This enables easy swapping of the databases and makes it possible to avoid many security issues. While you are not required to use LibK models you are encouraged to do so as it automates table creation and removal and allows you to hook into the export, import and backup mechanisms of Pointshop 2 without additional work.
 
-#. **Use lowercase file and folder names**: To keep linux compatibility please use lowercase file and foldernames. 
+#. **Allow users to reset the DLC**: Add an option that will reset the DLC. In case there are problems this create an easy fallback.
 
 Getting Started
 ***************

@@ -37,18 +37,12 @@ Internally this is achieved using the following components:
 .. note::
     Unlike in pointshop 1, in pointshop 2 an item is an instance of an item class. A shop item is the representation of that class.
 
-
-A **blueprint** is defined as the persistence, item base and creator for an item type.
-
 Creating a persistence
 ======================
 
 The first step when creating a custom item type is to create it's persistence. A persistence needs to be a LibK model, which is done by including the ``DatabaseModel`` mixin. 
 
-Creating the data model
-***********************
-
-You can use this template:
+Create a new file within your module called **sh_model_<itemname>persistence.lua**:
 
 .. highlight:: lua
 .. code-block:: lua
@@ -58,19 +52,21 @@ You can use this template:
     
     ExamplePersistence.static.DB = "Pointshop2" --Use the database configured for Pointshop2
     
-    
     ExamplePersistence.static.model = {
-    	tableName = "ps2_examplepersistence", --needs to be unique
+    	tableName = "ps2_examplepersistence", --needs to be unique. This is the table the fields are stored in
     	fields = {
     	    --holds the reference to the basic information (description, name, price)
     		itemPersistenceId = "int", 
     	    
-    	    --Define your custom fields here
-    		property1 = "string"
+    	    --Define your custom fields here. You can use all of the libk fieldtypes here. Usually you will need int or string
+    		property1 = "string",
+    		property2 = "int",
+    		--To save a table: e.g. item.property3 = { hello: 123 }
+    		property3 = "luadata",
     	},
     	belongsTo = {
-    	    -- Makes LibK automatically join the basic information table each times
-    	    -- it is received from the database
+    	    -- Makes LibK automatically join the basic information table each time
+    	    -- it is received from the database.
     		ItemPersistence = {
     			class = "Pointshop2.ItemPersistence",
     			foreignKey = "itemPersistenceId",
@@ -80,9 +76,6 @@ You can use this template:
     }
     
     ExamplePersistence:include( DatabaseModel ) --include the DatabaseModel mixin
-
-
-It is important to specify the ``DB`` property to ``Pointshop2``. This makes the model save to the database as configured for Pointshop2. 
 
 The model can be customized to contain as many fields as you need. If you need to save tables or nested data, consider joining another model (and creating a new belongsTo relationship) or simply use a field type that is serialized (json or luadata).
 
@@ -96,11 +89,10 @@ Implementing saving and updating logic
     LibK makes heavy use of *promises*. Using promises is required when saving or modifying models. They allow easy handling of asynchronous processes wihtout the need of messy nested callback chains. The promises script used (by Lexic) follows the javascript promises specification and the jQuery interface. More information: `General introduction <http://blog.parse.com/2013/01/29/whats-so-great-about-javascript-promises/>`_, `The jQuery interface documentation <http://api.jquery.com/jQuery.Deferred/>`_
 
 
-When a pointshop item is created using an Item Creator, the persistence is passed a "save table". This table's structure is defined entirely by your creator. Usually it simply contains the model fields. The same function is called for updating items once they are modified. For this the static function ``createOrUpdateFromSaveTable`` has to be added. It creates (or on update retrieves) an instance of the own and any required models and then saves it to the database. All fields that the user can configure when creating a custom item need to be included into the model.
+When a pointshop item is created using an Item Creator, the persistence is passed a "save table". This table's structure is filled by the Item Creator Derma Control. Usually it simply contains the model fields. The same function is called for updating items once they are modified. For this the static function ``createOrUpdateFromSaveTable`` has to be added. It creates (or on update retrieves) an instance of the own and any required models and then saves it to the database. All fields that the user can configure when creating a custom item need to be included into the model.
 
-Create a new file within your module called **sh_model_<itemname>persistence.lua**.
+Add the following to your persistence file you created in the last step:
 
-For simple items you can follow this template:
 
 .. highlight:: lua
 .. code-block:: lua
@@ -109,7 +101,7 @@ For simple items you can follow this template:
         -- Firstly, save or update the basic item information.
     	local promise = Pointshop2.ItemPersistence.createOrUpdateFromSaveTable( saveTable, doUpdate )
     	:Then( function( itemPersistence )
-    	    // First we fetch or create our persistence instance
+    	    // First we fetch or create our persistence instance.
     		if doUpdate then
     		    --We need to update an existing item.
     		    --Find the instance by using the itemPersistenceId and return it.
@@ -138,8 +130,35 @@ Creating the item base
 
 The next step is to create the item base for your item type. To do this, create a new file within **lua/kinv/items/pointshop**. The name should be ``sh_base_<itemname>.lua`` you can also put your file into a subdirectory. Inside of the item base you can now overwrite any of the pointshop base functions and add item hooks as required.
 
-.. todo::
-    Item hook explanation
+The file contains:
+
+.. highlight:: lua
+.. code-block:: lua
+
+    ITEM.PrintName = "Pointshop Example Item Type"
+    ITEM.baseClass = "base_pointshop_item"
+    
+    function ITEM.static.getPersistence( )
+    	return Pointshop2.ExamplePersistence --The name of the persistence model created in the last step
+    end
+    
+    function ITEM:OnEquip( )
+        -- Your logic. 
+        local itemOnwer = self:GetOwner()
+    end
+    
+    function ITEM:OnHolster()
+    end
+
+    function ITEM.static.generateFromPersistence( itemTable, persistenceItem )
+    	ITEM.super.generateFromPersistence( itemTable, persistenceItem.ItemPersistence )
+    	itemTable.property1 = persistenceItem.property1
+    end
+
+
+Please note the function generateFromPersistence. In this function you load all data from the item persisence into the item class. 
+
+To generate the item class first call the super class' method by invoking ``ITEM.super.generateFromPersistence( itemTable, persistenceItem.ItemPersistence )``. Then you simply copy your item's properties over to the item class. You should set these to to the ``itemTable.static`` table since they belong to a class itself and not an instance (which would be an instantiated item in the player's inventory). 
 
 .. lua:function:: ITEM.static.generateFromPersistence(itemTable, persistenceItem)
 
@@ -147,37 +166,8 @@ The next step is to create the item base for your item type. To do this, create 
     
     **itemTable**: A table containing the created class.
     **persistenceItem**: An instance of this item's persistence.
-    
-
-The next step is to make sure that the item persistence can be loaded into a valid instance of the item base. This is done by using the static ``generateFromPersistence`` method. This method is pretty much the opposite of the persistence's createOrUpdateFromSaveTable method (with the exception that a valid item class is created instead of a save table). To generate the item class first call the super class' method by invoking ``ITEM.super.generateFromPersistence( itemTable, persistenceItem.ItemPersistence )``. Next simple copy your item's properties over to the item class. You should set these to to the ``itemTable.static`` table since they belong to a class itself and not an instance (which would be an instantiated item in the player's inventory). 
-
-Next you need to link the base to the persistence. To do this simply define a static ``getPersistence`` method which returns the persistence class used.
-
-Example:
 
 
-.. highlight:: lua
-.. code-block:: lua
-
-    ITEM.PrintName = "Pointshop Example Base"
-    ITEM.baseClass = "base_pointshop_item"
-    
-    function ITEM.static.getPersistence( )
-    	return Pointshop2.ExamplePersistence
-    end
-    
-    function ITEM:OnEquip( ply )
-    
-    end
-    
-    function ITEM:OnHolster( ply )
-        --note that ply == self:GetOwner()
-    end
-
-    function ITEM.static.generateFromPersistence( itemTable, persistenceItem )
-    	ITEM.super.generateFromPersistence( itemTable, persistenceItem.ItemPersistence )
-    	itemTable.property1 = persistenceItem.property1
-    end
 
 Within the item base you can also specify your own, custom icon controls for both, the shop and the inventory.
 
@@ -243,8 +233,8 @@ Example:
     	return instanceOf( Pointshop2.GetItemClassByName( "base_example" ), item )
     end )
 
-Adding custom Settings
-======================
+OPTIONAL: Adding custom Settings
+================================
 
 Pointshop 2 has a builtin, extensible settings system. A module can add custom settings buttons to the builtin settings tab (Management -> Settings) which can then be used to create a GUI. The system first initializes the settings from the Lua table and copies the defaults, then reads settings from the database.
 To create custom settings you need the following components: the settings table, a settings button and a settings editor.

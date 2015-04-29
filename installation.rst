@@ -55,7 +55,7 @@ To enable MySQL please follow these steps:
 Troubleshooting and reporting bugs
 ----------------------------------
 
-When you are experiencing issues with pointshop 2 please follow these steps. For a fast solution include as much information as possible. Report bugs and problems only through coderhire tickets.
+When you are experiencing issues with pointshop 2 please follow these steps. For a fast solution include as much information as possible. Report bugs and problems only through scriptfodder tickets.
 
 #. **Turn on debug mode**: Follow the steps outlined here to enable verbose logging: :ref:`dev-options`.
 
