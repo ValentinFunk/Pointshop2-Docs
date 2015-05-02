@@ -19,6 +19,11 @@ The script can be found at https://scriptfodder.com/scripts/view/596
 DLCs available:
  - Boosters: https://scriptfodder.com/scripts/view/648
  - Gambling: https://scriptfodder.com/scripts/view/645
+ - Masks: https://scriptfodder.com/scripts/view/12
+ - Permanent Weapons: https://scriptfodder.com/scripts/view/677
+ - Crates & Drops: https://scriptfodder.com/scripts/view/1104
+ - Achievements: https://scriptfodder.com/scripts/view/11
+ - Gambling: https://scriptfodder.com/scripts/view/645
 
 This is the documentation site for Pointshop 2. You can find guides and explanation of various options here. If you are a developer you will also find detailed instructions for interacting with the script.
 
