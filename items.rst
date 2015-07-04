@@ -17,6 +17,11 @@ The pointshop comes with a few trails readily available and it is very easy to a
 
 To get your image to an actual Pointshop item, go to the second tab called Management. Now you should be on a tab called 'Create Items', with options to select the type. Go to Trail to bring up the basic settings menu, where you can personalize the item you are going to make. Once you are happy with the name and price, click the image preview next to the file path. This will bring up a box displaying all functioning materials inside /trails. Hover over them to play an animated preview, which will give some indication of how they look in-game. Once happy, save the item and if successful, will be found in Uncategorised Items, located inside the Manage Items tab. The last step is to move it into a category, which can achieved via drag and drop.
 
+Adding custom playermodels
+--------------------------
+To create a playermodel simply go to Mangement -> Create Item -> Playermodel. Click on the playermodel preview to bring up the selector. You can then pick a playermodel and change bodygroups and skin, if the model provides them.
+
+To add new playermodels to the shop from workshop, simply install the workshop addon to the server collection (`see GMod wiki <http://wiki.garrysmod.com/page/Workshop_for_Dedicated_Servers>`_). The addon is now installed to the server. To make sure that players download the addon on join you need to have a matching resource.AddWorkshop in your lua/autorun/server directory. (Details see `Xenonservers' Guide Step 4 <https://www.xenonservers.com/clients/knowledgebase.php?action=displayarticle&id=77>`_). When you bring up the playermodel creator the model can now be picked. Sometimes addons don't register the models as playermodels so the picker cannot find them. In this case you can extract the workshop addon to find out the model path and put the path into the manual entry text field next to the preview entry. Press enter once you've entered the model to apply it.
 
 Accessory/Hat Creation
 ----------------------
@@ -28,13 +33,8 @@ When creating a hat you have two options:
 
 #. Using the PAC3 editor embedded within the Pointshop2 hat editor
 
-Generally it is recommended to use the second way, this allows you to use the full editor and gives you more options. A common approach is to first create the PAC outfits in sandbox and then use the Hat Creator within the Management Tab to create a pointshop item from it. In gamemodes that do not derive from sandbox (for example TTT or Murder) the PAC editor cannot be used. In this case you can still use the Pointshop2 Hat Editor to create and position hats.
+Generally it is recommended to use the first way, this allows you to use the full editor and gives you more options. The best approach is to first create the PAC outfits in sandbox and then use the Hat Creator within the Management Tab to create a pointshop item from it. In gamemodes that do not derive from sandbox (for example TTT or Murder) the PAC editor cannot be used. In this case you can still use the Pointshop2 Hat Editor to create and position hats.
 
-Adding custom playermodels
---------------------------
-To create a playermodel simply go to Mangement -> Create Item -> Playermodel. Click on the playermodel preview to bring up the selector. You can then pick a playermodel and change bodygroups and skin, if the model provides them.
-
-To add new playermodels to the shop from workshop, simply install the workshop addon to the server collection (`see GMod wiki <http://wiki.garrysmod.com/page/Workshop_for_Dedicated_Servers>`_). The addon is now installed to the server. To make sure that players download the addon on join you need to have a matching resource.AddWorkshop in your lua/autorun/server directory. (Details see `Xenonservers' Guide Step 4 <https://www.xenonservers.com/clients/knowledgebase.php?action=displayarticle&id=77>`_). When you bring up the playermodel creator the model can now be picked. Sometimes addons don't register the models as playermodels so the picker cannot find them. In this case you can extract the workshop addon to find out the model path and put the path into the manual entry text field next to the preview entry. Press enter once you've entered the model to apply it.
 
 Introduction into PAC
 *********************
