@@ -30,6 +30,12 @@ When creating a hat you have two options:
 
 Generally it is recommended to use the second way, this allows you to use the full editor and gives you more options. A common approach is to first create the PAC outfits in sandbox and then use the Hat Creator within the Management Tab to create a pointshop item from it. In gamemodes that do not derive from sandbox (for example TTT or Murder) the PAC editor cannot be used. In this case you can still use the Pointshop2 Hat Editor to create and position hats.
 
+Adding custom playermodels
+--------------------------
+To create a playermodel simply go to Mangement -> Create Item -> Playermodel. Click on the playermodel preview to bring up the selector. You can then pick a playermodel and change bodygroups and skin, if the model provides them.
+
+To add new playermodels to the shop from workshop, simply install the workshop addon to the server collection (`see GMod wiki <http://wiki.garrysmod.com/page/Workshop_for_Dedicated_Servers>`_). The addon is now installed to the server. To make sure that players download the addon on join you need to have a matching resource.AddWorkshop in your lua/autorun/server directory. (Details see `Xenonservers' Guide Step 4 <https://www.xenonservers.com/clients/knowledgebase.php?action=displayarticle&id=77>`_). When you bring up the playermodel creator the model can now be picked. Sometimes addons don't register the models as playermodels so the picker cannot find them. In this case you can extract the workshop addon to find out the model path and put the path into the manual entry text field next to the preview entry. Press enter once you've entered the model to apply it.
+
 Introduction into PAC
 *********************
 PAC (short for Player Appearance Customizer) is an addon made by CapsAdmin. It allows you to fully customize your looks.
