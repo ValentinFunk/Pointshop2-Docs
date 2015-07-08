@@ -5,7 +5,19 @@ In Pointshop 2 points are stored in a player's wallet (:lua:class:`Wallet`). A w
 
 Wallets are only networked to their owner and to all admins by default. If you want to display points on a scoreboard, you need to tick the setting "Broadcast Wallets" in the General Settings. This will send everyone's wallet to everyone.
 
-Use ply.PS2_Wallet to access a player's wallet. To manipulate a wallet use
+Use ply.PS2_Wallet to access a player's wallet. 
+
+
+.. highlight:: lua
+.. code-block:: lua
+	
+	local points, premiumPoints = 0, 0
+	if ply.PS2_Wallet then
+		points, premiumPoints = ply.PS2_Wallet.points, ply.PS2_Wallet.premiumPoints
+	end
+	print( points, premiumPoints )
+
+To manipulate a wallet use
 
 :lua:func:`PLAYER:PS2_AddPremiumPoints`
 
