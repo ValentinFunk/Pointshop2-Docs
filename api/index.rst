@@ -118,6 +118,10 @@ Modules
     **Name**:label of the slot that is shown underneath the slot's panel in the inventory.
     **itemValidFunction**: A function that takes an item as an argument and returns whether or not it can be equipped in the slot.
     
+.. lua:function:: Pointshop2.AddHatSlot(name)
+
+    Adds a new slot that behaves exactly like the existing Hat/Accessory slots.
+    
 .. lua:function:: Pointshop2:AddTab(label, controlName, shouldShow)
 
     Adds a new tab to the top navigation of the pointshop.
