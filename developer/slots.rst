@@ -5,7 +5,7 @@ Sometimes you will want an extra accessory or other type of slot. Since it is no
 
 Using the customizing addon
 ===========================
-It is recommended to extend Pointshop 2 using a seperate addon. Simply download this addon and extract it into your addons folder: `Download <https://storage.sbg-1.runabove.io/v1/AUTH_66fcef59d5fa44c39f33878dbaeb3904/ps2_static/pointshop2-customizing.zip>`_. Put your new slot code into ``pointshop2-customizing/lua/ps2/modules/pointshop2/sh_customslots.lua``. As an example a new accessory slot is added. 
+It is recommended to extend Pointshop 2 using a seperate addon. Simply download this addon and extract it into your addons folder: `Download <https://storage.sbg-1.runabove.io/v1/AUTH_66fcef59d5fa44c39f33878dbaeb3904/ps2_static/pointshop2-customizing.zip>`_. Put your new slot code into ``pointshop2-customizing/lua/ps2/modules/pointshop2/sh_customslots.lua``. As an example code to create a new accessory slot is already included (see below for code explanation). 
 
 Adding accessory slots
 ======================
