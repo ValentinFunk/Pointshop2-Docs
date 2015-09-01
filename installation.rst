@@ -57,3 +57,30 @@ When you are experiencing issues with pointshop 2 please follow these steps. For
 #. **Include client and server console logs**: Include the client and server console logs from when the issue happens. Include a bit before and after, including too much is not a problem. Use a pastebin like http://privatepaste.com/ for storing the information.
 
 #. **Include server configuration**: Are you using MySQL or SQLite? Do you use any custom extensions or any DLC? Which administration mod do you use? Which gamemode do you run?
+
+Importing and exporting items and categories
+--------------------------------------------
+
+Pointshop 2 allows importing and exporting items to text. You can use this feature to make backups of the shop or to transfer the item and category setup between servers.
+
+Exporting and importing items can only be done trough lua commands. You can however run these through the server console by prefixing them with lua_run. Check :ref:`export-import`
+
+Example workflow: 
+
+.. highlight:: lua
+.. code-block:: lua
+
+	-- On Server 1:
+		Pointshop2Controller:getInstance():exportItems() -- A filename is printed to the console
+		Pointshop2Controller:getInstance():exportCategoryOrganization() -- A filename is printed to the console
+		
+	-- You would now go into the data directory and transfer files from the first to the second server
+	
+	-- On Server 2:
+		Pointshop2Controller:getInstance():importItemsFromFile( "filename_1.txt" ) -- The filename from the first command
+		Pointshop2Controller:getInstance():importCategoriesFromFile( "filename_2.txt" ) -- The filename from the second command
+
+
+.. note::
+
+   Graphical import/export features and importing/exporting of wallets and inventories is planned and will be added in a future update.
