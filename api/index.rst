@@ -200,3 +200,27 @@ Player integration
     Adds premium points to a player's wallet.
     
     **points**: Amount of points given
+
+
+Export & Import
+---------------
+
+.. lua:function:: Pointshop2Controller:exportItems()
+    
+    Exports all items of the shop into a timestamped text file. The name of the file is written to console. The file is written into the data directory.
+    
+.. lua:function:: Pointshop2Controller:exportCategoryOrganization()
+    
+    Exports all categories and item->category mappings of the shop into a timestamped text file. The name of the file is written to console. The file is written into the data directory.
+    
+.. lua:function:: Pointshop2Controller:importCategoriesFromFile( filename )
+    
+    Imports categories and item->category mappings of the shop from a text file.
+    
+    **filename**: Name/path of the file to import from as string, relative to the data directory.
+    
+.. lua:function:: Pointshop2Controller:importItemsFromFile( filename )
+    
+    Imports items from a text file.
+    
+    **filename**: Name/path of the file to import from as string, relative to the data directory.
