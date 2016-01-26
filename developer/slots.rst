@@ -22,6 +22,22 @@ Example:
 		Pointshop2.AddHatSlot( "Accessory 3" )
 	end )
 	
+Adding weapond slots
+======================
+
+To add a weapond slot, use the function :lua:func:`Pointshop2.AddWeaponsSlot`. This requires the Permanent Weapons module to be fully loaded, which is why the function should be called inside of the hook ``PS2_ModulesLoaded``.
+
+Example:
+
+.. highlight:: lua
+.. code-block:: lua
+    
+	-- Adds a new Accessory slot
+	hook.Add( "PS2_ModulesLoaded", "AddKnifeSlot", function( )
+		Pointshop2.AddWeaponsSlot( "Knife" )
+	end )
+	
+	
 Adding other slot types
 =======================
 Other slot types usually do not have convenience functions like the Accessory type. It is still possible to add these slots by duplicating the code. The slot code is defined in the file ``sh_slots.lua`` which can be found in the module's main folder.
