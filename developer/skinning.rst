@@ -16,7 +16,7 @@ There are two types of hooks that you can use to customize looks and behaviour:
 #. **Layout Hooks**: These are always called after initialization of the component. You can use this hook to replace components with custom components or to reposition components.
 #. **Paint Hooks**: These work like the normal panel:Paint hooks, use this to customize the appearance of the different panels.
 
-If you are missing a hook on a component that you want to customize, please send Kamshak a pm on coderhire.
+If you are missing a hook on a component that you want to customize, please send Kamshak a pm on scriptfodder.
 
 Fonts
 -----
