@@ -24,6 +24,7 @@ DLCs available:
  - Crates & Drops: https://scriptfodder.com/scripts/view/1104
  - Achievements: https://scriptfodder.com/scripts/view/11
  - Gambling: https://scriptfodder.com/scripts/view/645
+ - Advent Calendar: https://scriptfodder.com/scripts/view/1799
 
 This is the documentation site for Pointshop 2. You can find guides and explanation of various options here. If you are a developer you will also find detailed instructions for interacting with the script.
 
