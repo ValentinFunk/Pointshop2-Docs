@@ -10,7 +10,7 @@ Whether you are extending or modifying the script, please follow the guildelines
 Developer License
 ---------------------------------------
 
-If you do not plan to use pointshop 2 on a server but want to create an addon to it, you can request a discounted developer license. The license is available for 10$. To request a license please contact Kamshak via `e-mail <mailto:funk.valentin@gmail.com>`_. Please include your experience/previous work and a rough description of what you want to add to the shop.
+If you do not plan to use pointshop 2 on a server but want to create an addon for it, you can request a free developer license. To request a license please contact Kamshak via PM on scriptfodder. Please include your experience/previous work and a rough description of what you plan to add to the shop.
 
 Modification Guidelines
 ***********************
