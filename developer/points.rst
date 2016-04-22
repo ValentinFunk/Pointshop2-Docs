@@ -35,6 +35,30 @@ There is also a console command available to give points to a specific steamid. 
     
     **points**: Amount of points to give
 
+Getting via MySQL (for loadingscreens etc)
+******************************************
+To get a player's points from a pointshop2 mysql database you can use the following query:
+
+.. highlight:: sql
+.. code-block:: sql
+
+	SELECT w.points AS points, w.premiumPoints AS premiumPoints
+	FROM ps2_wallet w, libk_player p
+	WHERE w.ownerId = p.id
+	AND p.player =  "STEAM_0:0:19299911"
+
+To get points via steamid64 you can use this query:
+
+.. highlight:: sql
+.. code-block:: sql
+
+	SELECT w.points AS points, w.premiumPoints AS premiumPoints
+	FROM ps2_wallet w, libk_player p
+	WHERE w.ownerId = p.id
+	AND p.steam64 =  "76561197998865550"
+
+The result row of these queries will contain a points and premiumPoints collumn.
+
 Giving Items
 ============
  
