@@ -37,7 +37,7 @@ Switching from SQLite to MySQL means that the pointshop is reset - the data is n
 
 To enable MySQL please follow these steps:
 
-#. **Install the gmsv_mysqloo module**: Download the module from `facepunch <http://facepunch.com/showthread.php?t=1357773>`_ and follow the installation instructions for your operating system at the bottom of the post.
+#. **Install the gmsv_mysqloo module**: Download the module from `facepunch <https://facepunch.com/showthread.php?t=1515853>`_ and follow the installation instructions for your operating system at the bottom of the post.
 
 #. **Enable MySQL within LibK**: LibK is used for all database operations of Pointshop2. To enable MySQL support go into the configuration file *addons/libk/lua/libk/server/sv_libk_config.lua*. Set ``LibK.SQL.UseMysql = true`` and update the remaining settings with your database connection details. If you are hosting the database on a different machine than the gamemserver, make sure to allow external connections to the database. 
 
