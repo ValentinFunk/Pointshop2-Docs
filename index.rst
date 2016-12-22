@@ -14,6 +14,8 @@ Its features include:
 - Inventory and Item slots
 - PAC3 Integration
 
+The official website where you can buy discounted packages is https://www.pointshop2.com/
+
 The script can be found at https://scriptfodder.com/scripts/view/596
 
 DLCs available:
