@@ -22,10 +22,10 @@ Example:
 		Pointshop2.AddHatSlot( "Accessory 3" )
 	end )
 	
-Adding weapond slots
+Adding weapon slots
 ======================
 
-To add a weapond slot, use the function :lua:func:`Pointshop2.AddWeaponsSlot`. This requires the Permanent Weapons module to be fully loaded, which is why the function should be called inside of the hook ``PS2_ModulesLoaded``.
+To add a weapon slot, use the function :lua:func:`Pointshop2.AddWeaponsSlot`. This requires the Permanent Weapons module to be fully loaded, which is why the function should be called inside of the hook ``PS2_ModulesLoaded``.
 
 Example:
 
