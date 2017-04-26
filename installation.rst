@@ -16,6 +16,22 @@ Final structure when everything is installed:
       - libk
       - pac3
       - pointshop2
+      
+Installing Workshop Content to the Server
+-----------------------------------------
+Installing the workshop content is **required to use the airdrops addon**. You can skip this step if you do not use airdrops.
+
+You need to add the `Content Addon <http://steamcommunity.com/sharedfiles/filedetails/?id=439856500>`_ to you server's workshop collection airdrops to work.
+
+If you have not set up a server workshop collection, follow these steps:
+
+#. **Generating a web api authorization key**: In order to use a workshop collection on your server, it must first have a web api authorization key. You can get one `here <http://steamcommunity.com/dev/apikey>`_. Once you have your key, add a new launch parameter to your srcds.exe command line: ``-authkey YOURAUTHKEYHERE``.
+
+#. **Creating a workshop collection**: Next create a workshop collection _`here <http://steamcommunity.com/workshop/editcollection/?appid=4000>`_. Select Server Content as Type and fill the rest of the fields. Next add the `Content Addon <http://steamcommunity.com/sharedfiles/filedetails/?id=439856500>`_. It's easier to find if you subscribe/fav it first.
+
+#. **Publish the collection**: On the last page when creating the collection, click "Publish". You might have to agree to the Steam TOS to proceed. The URL of the collection should look something like this when you are finished: ``http://steamcommunity.com/sharedfiles/filedetails/?id=913621233``. Write down the numbers from the URL.
+
+#. **Add the collection to your server**: Once you have written down the workshop id from the previous step, add a new launch parameter to your srcds.exe command line: ``+host_workshop_collection 123123123``, replacing the numbers with the id. Your launch parameters should now include both, the workshop collection and the authkey from step 1: ``+host_workshop_collection 123123123 -authkey YOURAUTHKEYHERE``.
 
 Configuration
 -------------
@@ -42,6 +58,7 @@ To enable MySQL please follow these steps:
 #. **Enable MySQL within LibK**: LibK is used for all database operations of Pointshop2. To enable MySQL support go into the configuration file *addons/libk/lua/libk/server/sv_libk_config.lua*. Set ``LibK.SQL.UseMysql = true`` and update the remaining settings with your database connection details. If you are hosting the database on a different machine than the gamemserver, make sure to allow external connections to the database. 
 
 #. **Test the configuration**: After a server restart Pointshop2 will now connect to MySQL. If there are any errors when connecting to the database they will be shown in the server console and logged to garrysmod/data/LibK_Error.txt serverside.
+
 
 Troubleshooting and reporting bugs
 ----------------------------------
