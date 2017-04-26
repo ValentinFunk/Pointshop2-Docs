@@ -27,7 +27,7 @@ If you have not set up a server workshop collection, follow these steps:
 
 #. **Generating a web api authorization key**: In order to use a workshop collection on your server, it must first have a web api authorization key. You can get one `here <http://steamcommunity.com/dev/apikey>`_. Once you have your key, add a new launch parameter to your srcds.exe command line: ``-authkey YOURAUTHKEYHERE``.
 
-#. **Creating a workshop collection**: Next create a workshop collection _`here <http://steamcommunity.com/workshop/editcollection/?appid=4000>`_. Select Server Content as Type and fill the rest of the fields. Next add the `Content Addon <http://steamcommunity.com/sharedfiles/filedetails/?id=439856500>`_. It's easier to find if you subscribe/fav it first.
+#. **Creating a workshop collection**: Next create a workshop collection `here <http://steamcommunity.com/workshop/editcollection/?appid=4000>`_. Select Server Content as Type and fill the rest of the fields. Next add the `Content Addon <http://steamcommunity.com/sharedfiles/filedetails/?id=439856500>`_. It's easier to find if you subscribe/fav it first.
 
 #. **Publish the collection**: On the last page when creating the collection, click "Publish". You might have to agree to the Steam TOS to proceed. The URL of the collection should look something like this when you are finished: ``http://steamcommunity.com/sharedfiles/filedetails/?id=913621233``. Write down the numbers from the URL.
 
