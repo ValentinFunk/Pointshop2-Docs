@@ -71,7 +71,7 @@ When you are experiencing issues with pointshop 2 please follow these steps. For
 
 #. **Capture the load log**: When the script loads it outputs a lot of information to the console. In your report include this, from both server and client console. If something goes wrong during load other errors can happen. The load log is printed on connect (clientside) and after a map change (serverside).
 
-#. **Include client and server console logs**: Include the client and server console logs from when the issue happens. Include a bit before and after, including too much is not a problem. Use a pastebin like http://privatepaste.com/ for storing the information.
+#. **Include client and server console logs**: Include the client and server console logs from when the issue happens. Include a bit before and after, including too much is not a problem. Use a pastebin like http://hastebin.com/ for storing the information.
 
 #. **Include server configuration**: Are you using MySQL or SQLite? Do you use any custom extensions or any DLC? Which administration mod do you use? Which gamemode do you run?
 
