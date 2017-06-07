@@ -4,6 +4,11 @@ Module Creation
 Modules are the best way to extend pointshop. Through them new item creators can 
 be added.
 
+.. note::
+    
+    This is a very technical description with very little example code. It is intended for reference use.
+    ** You can find a step-by-step tutorial here **: `Learn how to create a Pointshop 2 item in 3 easy Steps <https://www.physgun.com/pointshop-2/custom-item-part1/>`_ **
+
 Structure
 =========
 The module structure is very simple. Each module is a folder within the *lua/ps2/modules* folder.
