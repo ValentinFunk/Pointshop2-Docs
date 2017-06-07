@@ -71,5 +71,6 @@ For easier development the ``pointshop2_reload`` command to fully reload the scr
 Examples
 ********
 
-.. todo::
-    Add Examples
+- Bodygroups Chooser by AlphaWolf: https://github.com/snowywolf/Pointshop-2-Bodygroups
+- Blur Skin by AlphaWolf: https://github.com/snowywolf/Pointshop-2-Skin
+- Full tutorial on how to create a low gravity item: `Tutorial <https://www.physgun.com/pointshop-2/custom-item-part1/>`_ `Code <https://github.com/Kamshak/ps2-lowgravity>`_
