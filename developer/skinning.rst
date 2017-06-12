@@ -9,6 +9,10 @@ The name of the skin which is used is set within the main configuration file at
 *lua/ps2/shared/sh_config.lua*. The default flatui skin can be found in *lua/ps2/client/cl_dermaskin_flatui.lua*.
 The inventory is seperately skinned through the skin configured in *lua/kinv/shared/sh_config.lua*, the default skin can be found in *lua/kinv/client/cl_dermaskin.lua*
 
+Example Skins
+-------------
+- Blur Skin by AlphaWolf: https://github.com/snowywolf/Pointshop-2-Skin
+
 Types of Hooks
 --------------
 There are two types of hooks that you can use to customize looks and behaviour:
