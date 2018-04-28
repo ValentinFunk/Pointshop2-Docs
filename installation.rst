@@ -49,7 +49,7 @@ MySQL Setup
 ***********
 By default SQLite (via sv.db) is used to store all player and pointshop data. If you have a MySQL server you can also use MySQL with the script. This has the advantage of being more efficient for large amounts of data, enabling you to share items across multiple servers and allowing you to display data on the web. 
 
-Switching from SQLite to MySQL means that the pointshop is reset - the data is not transferred across. If you wish to keep your data you have to manually export it.
+If you want to switch from SQLite to MySQL you need to convert your database. We have created a tool where you can upload your SQLite database (located in your server's garrysmod folder) and download a .sql.gz file that you can import with phpmyadmin. `SQLite to MySQL <https://beta.pointshop2.com/sqlite-conversion/tool>`_
 
 To enable MySQL please follow these steps:
 
