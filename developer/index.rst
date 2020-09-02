@@ -1,17 +1,6 @@
 Developer Information
 =====================
 
-Pointshop2 was designed with modification, customization and extension in mind. You are welcome to modify or add to the script through coderhire jobs, scripts or private modifications. The following pages are designed to help you work with the addon.
-Whether you are extending or modifying the script, please follow the guildelines explained here.
-
-
-
-
-Developer License
----------------------------------------
-
-If you do not plan to use pointshop 2 on a server but want to create an addon for it, you can request a free developer license. To request a license please contact Kamshak via PM on scriptfodder. Please include your experience/previous work and a rough description of what you plan to add to the shop.
-
 Modification Guidelines
 ***********************
 #. **Never modify code files**: When extending or modifying pointshop 2 the first guideline is to never modify any of the core files. You can use hooks and global functions to extend the script or modify functionality. This makes sure that there are as little conflicts between addons as possible. If you need a specific hook or if modification of core files is a much easier solution to a general problem, please get in touch.
@@ -21,8 +10,6 @@ Modification Guidelines
 #. **Avoid global variables**: Use local variables or create a single global table for your addon to store globals. This avoids cluttering the global namespace, is faster and avoids conflicts.
 
 #. **Avoid direct database queries**: Pointshop 2 makes heavy use of LibK as a database abstraction layer. This enables easy swapping of the databases and makes it possible to avoid many security issues. While you are not required to use LibK models you are encouraged to do so as it automates table creation and removal and allows you to hook into the export, import and backup mechanisms of Pointshop 2 without additional work.
-
-#. **Allow users to reset the DLC**: Add an option that will reset the DLC. In case there are problems this create an easy fallback.
 
 Getting Started
 ***************
@@ -71,6 +58,7 @@ For easier development the ``pointshop2_reload`` command to fully reload the scr
 Examples
 ********
 
+- Full tutorial to create an item: https://physgun.netlify.app/pointshop-2/custom-item-part1/
 - Bodygroups Chooser by AlphaWolf: https://github.com/snowywolf/Pointshop-2-Bodygroups
 - Blur Skin by AlphaWolf: https://github.com/snowywolf/Pointshop-2-Skin
 - Full tutorial on how to create a low gravity item: `Tutorial <https://www.physgun.com/pointshop-2/custom-item-part1/>`_ `Code <https://github.com/Kamshak/ps2-lowgravity>`_
