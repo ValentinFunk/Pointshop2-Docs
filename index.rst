@@ -14,19 +14,20 @@ Its features include:
 - Inventory and Item slots
 - PAC3 Integration
 
-The official website where you can buy discounted packages is https://www.pointshop2.com/
+The official website where you can download Pointshop 2 for free is https://github.com/Kamshak/Pointshop2/
 
-The script can be found at https://scriptfodder.com/scripts/view/596
+If you need any help setting up Pointshop 2 or you are experiencing some issues you can join official PS2 Discord server at https://discord.gg/N9DmwwX
 
-DLCs available:
- - Boosters: https://scriptfodder.com/scripts/view/648
- - Gambling: https://scriptfodder.com/scripts/view/645
- - Masks: https://scriptfodder.com/scripts/view/12
- - Permanent Weapons: https://scriptfodder.com/scripts/view/677
- - Crates & Drops: https://scriptfodder.com/scripts/view/1104
- - Achievements: https://scriptfodder.com/scripts/view/11
- - Gambling: https://scriptfodder.com/scripts/view/645
+DLCs available(some DLCs may not be availible or may not work properly!):
+ - Boosters: https://github.com/Kamshak/ps2-boosters
+ - Gambling: https://github.com/Kamshak/ps2-gamble
+ - Permanent Weapons: https://github.com/Kamshak/ps2-permaweaps
+ - Crates & Drops: https://github.com/Kamshak/ps2-drops
+ - Airdrops: https://github.com/Kamshak/ps2_airdrops
+ - Texthats: https://github.com/Kamshak/ps2-texthat
  - Advent Calendar: https://scriptfodder.com/scripts/view/1799
+ - Masks: https://scriptfodder.com/scripts/view/12
+ - Achievements: https://scriptfodder.com/scripts/view/11
 
 This is the documentation site for Pointshop 2. You can find guides and explanation of various options here. If you are a developer you will also find detailed instructions for interacting with the script.
 

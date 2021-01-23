@@ -9,6 +9,8 @@ This will give you two folders: *addons/pointshop2* and *addons/libk*.
 Next install PAC3, the newest version can always be found `here <https://github.com/CapsAdmin/pac3/archive/master.zip>`_.
 Download and extract the zip, too. This will give you *addons/pac3-master*.
 
+You also need to add Pointshop 2 content to your server's workshop collection (see below).
+
 Final structure when everything is installed:
 
 - garrysmod
@@ -19,9 +21,8 @@ Final structure when everything is installed:
       
 Installing Workshop Content to the Server
 -----------------------------------------
-Installing the workshop content is **required to use the airdrops addon**. You can skip this step if you do not use airdrops.
 
-You need to add the `Content Addon <http://steamcommunity.com/sharedfiles/filedetails/?id=439856500>`_ to you server's workshop collection airdrops to work.
+You need to add the `Content Addon <http://steamcommunity.com/sharedfiles/filedetails/?id=439856500>`_ to you server's workshop collection for PS2 to work.
 
 If you have not set up a server workshop collection, follow these steps:
 
@@ -39,6 +40,11 @@ Pointshop2 requires no initial configuration! Once it is installed you are ready
 Restart your server and press F3 to open the menu.
 You can find all settings under the "Management" tab.
 
+If you don't see "Management" tab you either don't have administration addon or you are not admin.
+
+If you already have addon such as ULX go to your server's console. You can access XGUI with either "!menu" chat command or ``xgui`` console command. I suggest binding XGUI to any key for quick access. Use ``bind x xgui`` in console to bind command. Replace x with your key.
+If you don't have such addon installed download ULX and ULib from Github or add those to your server's workshop collection.
+To add yourself as admin type ``ulx adduser *your name* superadmin``.
 
 Advanced Configuration
 ----------------------
@@ -63,7 +69,7 @@ To enable MySQL please follow these steps:
 Troubleshooting and reporting bugs
 ----------------------------------
 
-When you are experiencing issues with pointshop 2 please follow these steps. For a fast solution include as much information as possible. Report bugs and problems only through scriptfodder tickets.
+When you are experiencing issues with pointshop 2 please follow these steps. For a fast solution include as much information as possible. Report bugs and problems through `Discord <https://discord.gg/N9DmwwX>`_ #support channel.
 
 #. **Turn on debug mode**: Follow the steps outlined here to enable verbose logging: :ref:`dev-options`.
 
