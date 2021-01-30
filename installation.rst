@@ -17,6 +17,8 @@ Final structure when everything is installed:
       - pac3
       - pointshop2
       
+Make sure that those folders are fully lowercase (e.g. pointshop2 not Pointshop2). Otherwise GMod won't load those addons.
+      
 Installing Workshop Content to the Server
 -----------------------------------------
 Installing the workshop content is **required to use the airdrops addon**. You can skip this step if you do not use airdrops.
